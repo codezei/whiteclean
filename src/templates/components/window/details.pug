@@ -1,0 +1,48 @@
+section.block.details.custom-bg-light  
+    .container 
+        .row.justify-content-around.align-items-center 
+            .col-12.col-lg-6 
+                h1.details__title Mycie i Polerowanie Szyb – Krystaliczna Czystość bez Zacieków
+                p.details__description.custom-bg-light Oferujemy profesjonalne mycie i polerowanie szyb w domach, mieszkaniach i lokalach usługowych. Dzięki doświadczeniu, sprawdzonym środkom i dokładności zapewniamy idealną przejrzystość bez smug i zacieków. Obsługujemy Gdańsk i okolice – szybko, sprawnie i z troską o detale.
+                ul 
+                    li 
+                        b.text-bold Krystaliczna czystość: 
+                        | Lśniące szyby bez smug, zacieków i kurzu.
+                    li 
+                        b.text-bold Profesjonalny sprzęt i środki: 
+                        | Używamy wysokiej klasy narzędzi i środków bezpiecznych dla powierzchni.
+                    li 
+                        b.text-bold Mycie wewnętrzne i zewnętrzne: 
+                        | W tym szyby trudnodostępne oraz witryny sklepowe.
+                    li 
+                        b.text-bold Terminowość i dokładność: 
+                        | Pracujemy sprawnie i punktualnie, dbając o każdy detal.
+                    li 
+                        b.text-bold Bezpieczeństwo pracy: 
+                        | Wysokie standardy BHP, zabezpieczenie powierzchni i otoczenia.
+            .col-12.col-lg-6.col-xl-5.col-xxl-4 
+                .swiper.details-swiper
+                    .swiper-wrapper 
+                        each num in [1,2,3,4]
+                            .swiper-slide 
+                                picture.work
+                                    source(srcset=`img/window/window-img-${num}-mob.webp`, type="image/webp")
+                                    img.work__img(src=`img/window/window-img-${num}-mob.jpg`, alt=`Mycie szyb – zdjęcie ${num}`)
+                    .swiper-button-next
+                    .swiper-button-prev
+                .swiper.details-swiper-thumb 
+                    .swiper-wrapper 
+                        each num in [1,2,3,4]
+                            .swiper-slide 
+                                picture.work
+                                    source(srcset=`img/window/window-img-${num}-mob.webp`, type="image/webp")
+                                    img.work__img(src=`img/window/window-img-${num}-mob.jpg`, alt="")
+            .col-12
+                .row.justify-content-center
+                    .col-auto
+                        a.btn.btn-primary.btn-normal(href="#cta") Umów się
+                    .col-auto
+                        a.btn.btn-secondary.btn-normal(href="tel:+48452230843") 
+                            svg.icon.shake(xmlns="http://www.w3.org/2000/svg", width="16", height="16", fill="currentColor", viewBox="0 0 16 16")
+                                path(fill-rule="evenodd", d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z")
+                            | Zadzwoń

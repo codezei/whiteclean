@@ -1,0 +1,130 @@
+section.reviews#reviews.block
+    .container
+        .row.g-4 
+            .col-12
+                .row.align-items-center.justify-content-between.flex-nowrap
+                    .col-auto(data-aos="fade-right")
+                        h2.reviews__title.text-uppercase Відгуки
+                        h3.reviews__subtitle.h6.text-light.mb-0 Реальні історії задоволених замовників
+                    .col-auto(data-aos="fade-left") 
+                        .swiper-navigation
+                            .reviews-button-prev.btn.btn-third-outline.btn-small
+                                .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+                                .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+                                .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+                                .triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+                                svg.bi.bi-chevron-left(xmlns="http://www.w3.org/2000/svg", width="16", height="16", fill="currentColor", viewBox="0 0 16 16")
+                                    path(fill-rule="evenodd", d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0")
+                            .reviews-button-next.btn.btn-third-outline.btn-small
+                                .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+                                .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+                                .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+                                .triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+                                svg.bi.bi-chevron-right(xmlns="http://www.w3.org/2000/svg", width="16", height="16", fill="currentColor", viewBox="0 0 16 16")
+                                    path(fill-rule="evenodd", d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708")
+            .col-12(data-aos="fade-in", data-aos-delay="200") 
+                .swiper.reviews-swiper 
+                    .swiper-wrapper
+                        .swiper-slide
+                            .review.card.card-primary-outline 
+                                .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+                                .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+                                .review__header
+                                    //- .review__ava(data-letter="K", style="--bg-color: teal")
+                                    //- div
+                                    h6.review__name Karolina Maj
+                                    .rating.review__rating(style="--star-rating: 5;")
+                                p.review__text Skorzystałam z usługi prania narożnika i jestem zachwycona. Meble odzyskały świeżość, a plamy zniknęły całkowicie!
+
+                        .swiper-slide
+                            .review.card.card-primary-outline 
+                                .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+                                .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+                                .review__header
+                                    //- .review__ava(data-letter="Р", style="--bg-color: navy")
+                                    //- div
+                                    h6.review__name Роман Іващенко
+                                    .rating.review__rating(style="--star-rating: 5;")
+                                p.review__text Замовляв хімчистку матрацу — запах зник, плями також. Все зробили акуратно, майстер був ввічливий. Рекомендую!
+
+                        .swiper-slide
+                            .review.card.card-primary-outline  
+                                .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+                                .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+                                .review__header
+                                    //- .review__ava(data-letter="M", style="--bg-color: brown")
+                                    //- div
+                                    h6.review__name Michał Pawlak
+                                    .rating.review__rating(style="--star-rating: 5;")
+                                p.review__text Bardzo profesjonalna usługa. Czyszczenie tapicerki fotela i dywanu przebiegło szybko i bezproblemowo. Efekt WOW!
+
+                        .swiper-slide
+                            .review.card.card-primary-outline  
+                                .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+                                .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+                                .review__header
+                                    //- .review__ava(data-letter="O", style="--bg-color: darkgreen")
+                                    //- div
+                                    h6.review__name Olga Kowal
+                                    .rating.review__rating(style="--star-rating: 5;")
+                                p.review__text Nie spodziewałam się aż takiej różnicy! Kanapa wygląda jak nowa, a zapach świeżości utrzymuje się długo. Dziękuję!
+
+                        .swiper-slide
+                            .review.card.card-primary-outline  
+                                .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+                                .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+                                .review__header
+                                    //- .review__ava(data-letter="Д", style="--bg-color: maroon")
+                                    //- div
+                                    h6.review__name Дмитро Ковальчук
+                                    .rating.review__rating(style="--star-rating: 5;")
+                                p.review__text Хлопці почистили салон авто — навіть найстаріші плями зникли. Машина пахне як нова. Дуже вдячний!
+
+                        .swiper-slide
+                            .review.card.card-primary-outline  
+                                .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+                                .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+                                .review__header
+                                    //- .review__ava(data-letter="E", style="--bg-color: indigo")
+                                    //- div
+                                    h6.review__name Elżbieta Sokołowska
+                                    .rating.review__rating(style="--star-rating: 5;")
+                                p.review__text Świetna obsługa klienta, szybka realizacja i naprawdę widoczne efekty. Polecam każdemu, kto chce odświeżyć tapicerkę!
+
+                        .swiper-slide
+                            .review.card.card-primary-outline 
+                                .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+                                .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+                                .review__header
+                                    //- .review__ava(data-letter="S", style="--bg-color: darkslateblue")
+                                    //- div
+                                    h6.review__name Sebastian Nowicki
+                                    .rating.review__rating(style="--star-rating: 5;")
+                                p.review__text Materac i sofa wyczyszczone perfekcyjnie. Szybko, czysto, bez problemów. Będę korzystać regularnie.
+
+                        .swiper-slide
+                            .review.card.card-primary-outline  
+                                .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
+                                .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
+                                .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
+                                .review__header
+                                    //- .review__ava(data-letter="Н", style="--bg-color: seagreen")
+                                    //- div
+                                    h6.review__name Надія Мельник
+                                    .rating.review__rating(style="--star-rating: 5;")
+                                p.review__text Замовляла хімчистку дивану — результат вражаючий. Все швидко і якісно. Дуже приємні люди!

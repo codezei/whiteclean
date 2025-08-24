@@ -1,0 +1,82 @@
+include ../mixins/categories
+
+section.works.block#works
+    .container
+        .row.g-4 
+            .col-12(data-aos="fade-right")
+                h2.works__title.text-uppercase Фото робіт
+                h3.works__subtitle.h6.text-light.mb-0 Живі приклади нашої роботи.
+            .col-12(data-aos="fade-in", data-aos-delay="200")
+                .categories-navigation
+                    .works-categories-swiper 
+                        .swiper-button-next.categories-button-arrow
+                        .swiper-button-prev.categories-button-arrow
+                        .swiper-wrapper 
+                            .swiper-slide
+                                button.btn.btn-primary.btn-small.category-btn(type="button") 
+                                    .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+                                    .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+                                    span.category-btn__text Оббивка меблів
+                            .swiper-slide
+                                button.btn.btn-primary.btn-small.category-btn(type="button") 
+                                    .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+                                    .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+                                    span.category-btn__text Матраци
+                            .swiper-slide
+                                button.btn.btn-primary.btn-small.category-btn(type="button") 
+                                    .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+                                    .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+                                    span.category-btn__text Килими
+                            .swiper-slide
+                                button.btn.btn-primary.btn-small.category-btn(type="button") 
+                                    .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+                                    .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+                                    span.category-btn__text Клінінг
+                            .swiper-slide
+                                button.btn.btn-primary.btn-small.category-btn(type="button") 
+                                    .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+                                    .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+                                    span.category-btn__text Вікна
+                .categories-content
+                    .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+                    .triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+                    .swiper.works-swiper
+                        .swiper-wrapper 
+                            .swiper-slide
+                                .row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+                                    each num in [1,2,3,4]
+                                        a.col(href=`img/furniture/furniture-img-${num}.webp`) 
+                                            picture.work
+                                                source(srcset=`img/furniture/furniture-img-${num}-mob.webp`, type="image/webp")
+                                                img.work__img(loading="lazy", src=`img/furniture/furniture-img-${num}-mob.jpg`, alt="")
+                            .swiper-slide
+                                .row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+                                    each num in [1,2,3,4]
+                                        a.col(href=`img/mattress/mattress-img-${num}.webp`) 
+                                            picture.work
+                                                source(srcset=`img/mattress/mattress-img-${num}-mob.webp`, type="image/webp")
+                                                img.work__img(loading="lazy", src=`img/mattress/mattress-img-${num}-mob.jpg`, alt="")
+                            .swiper-slide
+                                .row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+                                    each num in [1,2,3,4]
+                                        a.col(href=`img/carpet/carpet-img-${num}.webp`) 
+                                            picture.work
+                                                source(srcset=`img/carpet/carpet-img-${num}-mob.webp`, type="image/webp")
+                                                img.work__img(loading="lazy", src=`img/carpet/carpet-img-${num}-mob.jpg`, alt="")
+                            .swiper-slide
+                                .row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+                                    each num in [1,2,3,4]
+                                        a.col(href=`img/cleaning/cleaning-img-${num}.webp`) 
+                                            picture.work
+                                                source(srcset=`img/cleaning/cleaning-img-${num}-mob.webp`, type="image/webp")
+                                                img.work__img(loading="lazy", src=`img/cleaning/cleaning-img-${num}-mob.jpg`, alt="")
+                            .swiper-slide
+                                .row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
+                                    each num in [1,2,3,4]
+                                        a.col(href=`img/window/window-img-${num}.webp`) 
+                                            picture.work
+                                                source(srcset=`img/window/window-img-${num}-mob.webp`, type="image/webp")
+                                                img.work__img(loading="lazy", src=`img/window/window-img-${num}-mob.jpg`, alt="")
+            .col-12(data-aos="fade-up", data-aos-delay="400") 
+                .row.g-2.justify-content-center 
+                    include cta-buttons

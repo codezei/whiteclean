@@ -1,0 +1,51 @@
+extends settings/layout
+
+prepend html
+  - const lang = "pl";
+
+prepend head
+  - const pageTitle = "Czyszczenie Materacy Gdańsk | Gmax – Profesjonalna Usługa z Dojazdem"
+  - const pageDescription = "Profesjonalne czyszczenie materacy jedno- i dwuosobowych w Gdańsku. Usuwamy plamy, roztocza, bakterie i zapachy. Idealne dla alergików. Dojazd do klienta gratis. Gmax – czystość, którą czuć."
+  - const pageKeywords = "czyszczenie materacy Gdańsk, pranie materaca, usuwanie roztoczy, higiena materacy, czyszczenie plam z materaca, Gmax Gdańsk"
+  - const pageUrl = "mattress.html"
+  - const pageImage = "img/service-mattress.jpg"
+  - const twitterImage = "img/service-mattress.jpg"
+  - const themeColor = "#ffffff"
+
+
+append head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Czyszczenie materacy",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Gmax",
+        "url": "https://gmax.com.pl/",
+        "telephone": "+48 452 230 843"
+      },
+      "url": "https://gmax.com.pl/mattress.html",
+      "areaServed": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gdańsk",
+          "addressCountry": "PL"
+        }
+      },
+      "description": "Profesjonalne czyszczenie materacy – usuwanie plam, roztoczy i zapachów. Idealne rozwiązanie dla alergików. Usługa z dojazdem."
+    }
+
+
+append content
+  include components/header
+  main
+    include components/mattress/details
+    include components/cta
+    include components/reviews
+    include components/contacts
+    include components/popup
+  include components/footer
+
+append scripts

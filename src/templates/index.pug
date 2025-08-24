@@ -1,0 +1,62 @@
+extends settings/layout
+
+prepend html
+  - const lang = "pl";
+
+prepend head
+  - const pageTitle = "Хімчистка меблів, матраців, коврів, клінінг приміщень і мийка вікон | White Clean Прага та околиці"
+  - const themeColor = "#ffffff"
+  - const pageDescription = "White Clean — професійна хімчистка меблів, матраців, коврів, клінінг приміщень і мийка вікон у Празі та околицях."
+  - const pageKeywords = "хімчистка меблів Прага, хімчистка оббивки Прага, хімчистка матраців Прага, хімчистка коврів Прага, клінінг приміщень Прага, мийка вікон Прага, професійна хімчистка Прага, прибирання квартир Прага, прибирання офісів Прага, клінінгові послуги Прага, хімчистка дивану Прага, хімчистка крісел Прага, хімчистка килимів та ковроліну Прага, чищення меблів від плям Прага, чищення матрацу від запаху Прага, професійне прибирання Прага та околиці, екологічна хімчистка Прага, хімчистка вдома Прага, миття та полірування вікон Прага, клінінг під ключ Прага, хімчистка меблів Прага та околиці, хімчистка коврів Прага передмістя, прибирання будинків Прага та околиці, клінінгові послуги Прага та регіон"
+  - const pageUrl = "";
+  - const pageImage = "img/logo-big.png";
+  - const twitterImage = "img/logo-big.png";
+
+append head
+  //- link(rel="preload" as="image" href="img/promo-bg-mob.webp" type="image/webp" media="(max-width: 575px)")
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "WhiteClean",
+      "image": "https://whiteclean.com.cz/img/logo.png",
+      "url": "https://whiteclean.com.cz/",
+      "telephone": "+99 999 999 999",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Praha",
+        "addressCountry": "CZ"
+      },
+      "description": "White Clean — професійна хімчистка меблів, матраців, коврів, клінінг приміщень і мийка вікон у Празі та околицях.",
+      "areaServed": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Praha",
+          "addressCountry": "CZ"
+        }
+      }
+    }
+
+
+append content
+  include components/icons
+  include components/header
+  main
+    include components/promo
+    //- include components/feature
+    include components/services
+    include components/about
+    include components/why
+    include components/how
+    include components/price
+    hr
+    include components/works
+    include components/cta
+    include components/reviews
+    include components/faq
+    include components/contacts
+    include components/popup
+  include components/footer
+
+append scripts

@@ -1,0 +1,51 @@
+extends settings/layout
+
+prepend html
+  - const lang = "pl";
+
+prepend head
+  - const pageTitle = "Czyszczenie Tapicerki Samochodowej Gdańsk | Gmax – Profesjonalna Usługa Detailingowa"
+  - const pageDescription = "Kompleksowe czyszczenie tapicerki samochodowej w Gdańsku – skutecznie usuwamy plamy, brud i zapachy. Tapicerka materiałowa i skórzana. Dojazd do klienta lub obsługa w punkcie. Gmax – zadbane wnętrze Twojego auta."
+  - const pageKeywords = "czyszczenie tapicerki samochodowej Gdańsk, pranie foteli samochodowych, detailing wnętrza auta, usuwanie zapachów z auta, Gmax Gdańsk"
+  - const pageUrl = "salon.html"
+  - const pageImage = "img/service-salon.jpg"
+  - const twitterImage = "img/service-salon.jpg"
+  - const themeColor = "#ffffff"
+
+
+append head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Czyszczenie tapicerki samochodowej",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Gmax",
+        "url": "https://gmax.com.pl/",
+        "telephone": "+48 452 230 843"
+      },
+      "url": "https://gmax.com.pl/salon.html",
+      "areaServed": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gdańsk",
+          "addressCountry": "PL"
+        }
+      },
+      "description": "Kompleksowe czyszczenie wnętrza auta – fotele, podsufitka, podłoga i boczki. Profesjonalnie, szybko i bezpiecznie."
+    }
+
+
+append content
+  include components/header
+  main
+    include components/salon/details
+    include components/cta
+    include components/reviews
+    include components/contacts
+    include components/popup
+  include components/footer
+
+append scripts

@@ -1,0 +1,71 @@
+section.cta#cta.bg.bg-dark
+    .container 
+        .row.justify-content-center
+            .col-12.col-lg-4
+                .mask.reflect-x 
+                    .triangle.triangle-135.top-inner.left-inner
+                    .triangle.triangle-45.top-inner.right-inner
+                    .triangle.triangle-45.top-inner.right-inner
+                    .triangle.triangle-225.bottom-inner.left-inner
+                    .triangle.triangle-315.bottom-inner.right-inner
+                    .triangle.triangle-45.top-inner.left-outer.offset-x-p
+                    .triangle.triangle-135.top-inner.right-outer.offset-x-p
+                    .triangle.triangle-225.bottom-inner.right-outer.offset-x-p.d-none.d-lg-block
+                    .triangle.triangle-315.triangle-fill.bottom-inner.right-inner.offset-x-n.d-lg-none.correction-y-n
+                    .line.line-v-100.top-inner.right-outer
+                    .line.line-v-50.top-inner.left-outer
+                    .line.line-h-100.bottom-inner.left-inner.d-lg-none.correction-y-n
+                    .rectangle.rectangle-50.left-inner.bottom-inner
+                        .triangle.triangle-225.left-inner.top-outer
+                        .triangle.triangle-225.bottom-inner.right-outer
+                        .triangle.triangle-225.triangle-fill.left-inner.offset-x-n.top-outer.correction-y-n
+                        .rectangle.rectangle-100.rectangle-fill.left-inner.offset-x-n.bottom-inner.correction-y-n
+                        .triangle.triangle-225.triangle-fill.bottom-inner.right-outer.offset-x-n.correction-y-n
+                    img.mask__img(src="img/cta-img.jpg", alt="")
+                    .mask__inner(data-aos="fade-down")
+                        h2.mask__title З'єднатись з нами
+                        //- h3.h6.mask__subtitle 
+            .col-12.col-lg-8.align-self-center
+                .block
+                    .row.g-4
+                        .col-12(data-aos="fade-down", data-aos-delay="400")
+                            h3.h2.cta__title.text-center.text-uppercase Маєте запитання? Напишіть нам!
+                            h4.cta__subtitle.h6.text-center.text-light.mb-0 Заповніть форму, і ми зв'яжемося з вами якомога швидше.
+                        .col-12(data-aos="fade-in", data-aos-delay="600")
+                            form.cta__form#cta-form(method="POST")
+                                .row.g-2 
+                                    .col-6 
+                                        .card.card-primary-outline.input-wrap
+                                            .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+                                            .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+                                            .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+                                            .triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+                                            input.input.cta__input(type="text", placeholder="Ім'я", name="name", required)
+                                    .col-6 
+                                        .card.card-primary-outline.input-wrap
+                                            .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+                                            .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+                                            .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+                                            .triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+                                            input.input.cta__input(type="tel", placeholder="Телефон", name="phone", required)
+                                    .col-12
+                                        .card.card-primary-outline.input-wrap
+                                            .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+                                            .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+                                            .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+                                            .triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+                                            select#service(name="work" required multiple).cta__input.input
+                                                option(value="" disabled selected) Оберіть послугу (Декілька Ctrl + Click)
+                                                option(value="Pranie tapicerki meblowej") Оббивка меблів
+                                                option(value="Czyszczenie dywanów") Чистка коврів
+                                                option(value="Mycie i polerowanie szyb") Мийка вікон
+                                                option(value="Czyszczenie zasłon i rolet") Клінінг приміщень
+                                                option(value="Pranie materacy") Чистка матрасів
+                                                option(value="Pranie materacy") Інше
+                                    .col-12 
+                                        button.btn.btn-primary.btn-normal.btn-rhombus.cta__btn(type="submit") 
+                                            .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
+                                            .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
+                                            .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
+                                            .triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
+                                            | Залишити заявку

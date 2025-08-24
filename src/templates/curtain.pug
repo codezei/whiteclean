@@ -1,0 +1,50 @@
+extends settings/layout
+
+prepend html
+  - const lang = "pl";
+
+prepend head
+  - const pageTitle = "Czyszczenie Zasłon i Rolet Gdańsk | Gmax – Profesjonalna Usługa z Dojazdem"
+  - const pageDescription = "Profesjonalne czyszczenie zasłon i rolet w Gdańsku – skutecznie usuwamy kurz, plamy i zapachy. Bezpieczne dla tkanin i alergików. Dojazd do klienta gratis. Gmax – czystość bez kompromisów."
+  - const pageKeywords = "czyszczenie zasłon Gdańsk, pranie rolet, czyszczenie rolet, czyszczenie dekoracji okiennych, czyszczenie tkanin, Gmax Gdańsk"
+  - const pageUrl = "curtain.html"
+  - const pageImage = "img/service-curtain.jpg"
+  - const twitterImage = "img/service-curtain.jpg"
+  - const themeColor = "#ffffff"
+
+append head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Czyszczenie zasłon i rolet",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Gmax",
+        "url": "https://gmax.com.pl/",
+        "telephone": "+48 452 230 843"
+      },
+      "url": "https://gmax.com.pl/curtain.html",
+      "areaServed": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gdańsk",
+          "addressCountry": "PL"
+        }
+      },
+      "description": "Delikatne i skuteczne czyszczenie zasłon i rolet materiałowych. Usuwamy kurz, zapachy i alergeny – z dojazdem do klienta."
+    }
+
+
+append content
+  include components/header
+  main
+    include components/curtain/details
+    include components/cta
+    include components/reviews
+    include components/contacts
+    include components/popup
+  include components/footer
+
+append scripts

@@ -1,0 +1,51 @@
+extends settings/layout
+
+prepend html
+  - const lang = "pl";
+
+prepend head
+  - const pageTitle = "Czyszczenie Mebli Tapicerowanych Gdańsk | Gmax – Profesjonalna Usługa Prania"
+  - const pageDescription = "Profesjonalne czyszczenie mebli tapicerowanych w Gdańsku – kanapy, fotele, narożniki. Skutecznie usuwamy plamy, brud i zapachy. Fachowy zespół, bezpieczne środki i szybki dojazd. Gmax – czystość, której możesz zaufać."
+  - const pageKeywords = "czyszczenie mebli tapicerowanych Gdańsk, pranie kanapy, pranie narożnika, czyszczenie fotela, czyszczenie tapicerki, Gmax Gdańsk"
+  - const pageUrl = "furniture.html"
+  - const pageImage = "img/service-furniture.jpg"
+  - const twitterImage = "img/service-furniture.jpg"
+  - const themeColor = "#ffffff"
+
+
+append head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Czyszczenie mebli tapicerowanych",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Gmax",
+        "url": "https://gmax.com.pl/",
+        "telephone": "+48 452 230 843"
+      },
+      "url": "https://gmax.com.pl/furniture.html",
+      "areaServed": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gdańsk",
+          "addressCountry": "PL"
+        }
+      },
+      "description": "Profesjonalne czyszczenie kanap, foteli i narożników. Szybko, bezpiecznie i z dojazdem do klienta na terenie Gdańska."
+    }
+
+
+append content
+  include components/header
+  main
+    include components/furniture/details
+    include components/cta
+    include components/reviews
+    include components/contacts
+    include components/popup
+  include components/footer
+
+append scripts

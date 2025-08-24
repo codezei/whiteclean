@@ -1,0 +1,50 @@
+extends settings/layout
+
+prepend html
+  - const lang = "pl";
+
+prepend head
+  - const pageTitle = "Czyszczenie Dywanów Gdańsk | Gmax – Profesjonalna Usługa Prania Dywanów"
+  - const pageDescription = "Profesjonalne czyszczenie dywanów w Gdańsku i okolicach – skutecznie usuwamy plamy, brud i zapachy. Doświadczony zespół, nowoczesny sprzęt i szybkie terminy realizacji. Gmax – ekspert w praniu dywanów."
+  - const pageKeywords = "czyszczenie dywanów Gdańsk, pranie dywanów, czyszczenie dywanu, usuwanie plam z dywanów, Gmax Gdańsk"
+  - const pageUrl = "carpet.html"
+  - const pageImage = "img/service-carpet.jpg"
+  - const twitterImage = "img/service-carpet.jpg"
+  - const themeColor = "#ffffff"
+
+append head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Czyszczenie dywanów",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Gmax",
+        "url": "https://gmax.com.pl/",
+        "telephone": "+48 452 230 843"
+      },
+      "url": "https://gmax.com.pl/carpet.html",
+      "areaServed": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gdańsk",
+          "addressCountry": "PL"
+        }
+      },
+      "description": "Skuteczne czyszczenie dywanów z odbiorem i dowozem. Usuwanie plam, zapachów i głębokich zabrudzeń. Gdańsk i okolice."
+    }
+
+
+append content
+  include components/header
+  main
+    include components/carpet/details
+    include components/cta
+    include components/reviews
+    include components/contacts
+    include components/popup
+  include components/footer
+
+append scripts

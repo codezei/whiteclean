@@ -1,0 +1,57 @@
+.cta {
+    position: relative;
+    z-index: 1;
+
+    &__input {
+        width: 100%;
+    }
+    &__label {
+        padding: 0 0.25rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        flex-grow: 1;
+    }
+    &__labels {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__btn {
+        width: 100%;
+    }
+}
+
+.input {
+    padding: 0.75rem 1rem;
+    display: inline-block;
+    background: transparent;
+    outline: none;
+    border: none;
+    // backdrop-filter: blur(10px);
+    max-width: 100%;
+    // border: 1px solid var(--fourth-color);
+    // border-radius: 0.5rem;
+    // background: #fff;
+    &-wrap {
+        --padding: 0;
+        &:has(input:focus, select:focus) {
+            --border-color: yellow;
+        }
+    }
+    &:focus {
+        
+        outline: none;
+        border: none;
+    }
+  }
+
+  .label {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    &:has(input:checked) {
+        background: #fff;
+        color: #000;
+    }
+  }

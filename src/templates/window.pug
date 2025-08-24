@@ -1,0 +1,51 @@
+extends settings/layout
+
+prepend html
+  - const lang = "pl";
+
+prepend head
+  - const pageTitle = "Mycie Okien Gdańsk | Gmax – Profesjonalne Mycie i Polerowanie Szyb"
+  - const pageDescription = "Profesjonalne mycie i polerowanie szyb w Gdańsku – domy, mieszkania, biura i witryny sklepowe. Czystość bez smug i zacieków. Doświadczenie, dokładność i bezpieczne środki. Gmax – krystaliczny efekt."
+  - const pageKeywords = "mycie okien Gdańsk, czyszczenie szyb, polerowanie okien, mycie witryn, mycie szyb zewnętrznych, Gmax Gdańsk"
+  - const pageUrl = "window.html"
+  - const pageImage = "img/service-window.jpg"
+  - const twitterImage = "img/service-window.jpg"
+  - const themeColor = "#ffffff"
+
+
+append head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Mycie i polerowanie szyb",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Gmax",
+        "url": "https://gmax.com.pl/",
+        "telephone": "+48 452 230 843"
+      },
+      "url": "https://gmax.com.pl/window.html",
+      "areaServed": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gdańsk",
+          "addressCountry": "PL"
+        }
+      },
+      "description": "Profesjonalne mycie i polerowanie szyb – mieszkania, domy, biura i witryny. Lśniące efekty bez smug i zacieków."
+    }
+
+
+append content
+  include components/header
+  main
+    include components/window/details
+    include components/cta
+    include components/reviews
+    include components/contacts
+    include components/popup
+  include components/footer
+
+append scripts
