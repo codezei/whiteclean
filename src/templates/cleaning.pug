@@ -1,0 +1,50 @@
+extends settings/layout
+
+prepend html
+  - const lang = "pl";
+
+prepend head
+  - const pageTitle = "Клінінг приміщень у Празі | White Clean"
+  - const pageDescription = "Регулярне та генеральне прибирання квартир, будинків і офісів у Празі та околицях. White Clean забезпечує ідеальну чистоту без турбот."
+  - const pageKeywords = "клінінг приміщень Прага, прибирання квартир Прага, прибирання офісів Прага, клінінгові послуги Прага, професійне прибирання Прага, клінінг під ключ Прага, White Clean Прага"
+  - const pageUrl = "cleaning.html"
+  - const pageImage = "img/service-cleaning.jpg"
+  - const twitterImage = "img/service-cleaning.jpg"
+  - const themeColor = "#ffffff"
+
+append head
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Клінінг приміщень",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "White Clean",
+        "url": "https://whiteclean.cz/",
+        "telephone": "+420 XXX XXX XXX"
+      },
+      "url": "https://whiteclean.cz/cleaning.html",
+      "areaServed": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Прага",
+          "addressCountry": "CZ"
+        }
+      },
+      "description": "Професійний клінінг квартир, будинків та офісів у Празі та околицях. Швидке та ефективне прибирання з використанням безпечних засобів."
+    }
+
+append content
+  include components/header
+  main
+    include components/cleaning/details
+    include components/price
+    include components/cta
+    include components/reviews
+    include components/contacts
+    include components/popup
+  include components/footer
+
+append scripts

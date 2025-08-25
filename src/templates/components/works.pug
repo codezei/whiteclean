@@ -47,36 +47,40 @@ section.works.block#works
                                     each num in [1,2,3,4]
                                         a.col(href=`img/furniture/furniture-img-${num}.webp`) 
                                             picture.work
-                                                source(srcset=`img/furniture/furniture-img-${num}-mob.webp`, type="image/webp")
-                                                img.work__img(loading="lazy", src=`img/furniture/furniture-img-${num}-mob.jpg`, alt="")
+                                                source(srcset=`img/furniture/furniture-img-${num}.webp`, type="image/webp")
+                                                img.work__img(loading="lazy", src=`img/furniture/furniture-img-${num}.jpg`, alt="")
                             .swiper-slide
                                 .row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
                                     each num in [1,2,3,4]
                                         a.col(href=`img/mattress/mattress-img-${num}.webp`) 
                                             picture.work
-                                                source(srcset=`img/mattress/mattress-img-${num}-mob.webp`, type="image/webp")
-                                                img.work__img(loading="lazy", src=`img/mattress/mattress-img-${num}-mob.jpg`, alt="")
+                                                source(srcset=`img/mattress/mattress-img-${num}.webp`, type="image/webp")
+                                                img.work__img(loading="lazy", src=`img/mattress/mattress-img-${num}.jpg`, alt="")
                             .swiper-slide
                                 .row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
                                     each num in [1,2,3,4]
                                         a.col(href=`img/carpet/carpet-img-${num}.webp`) 
                                             picture.work
-                                                source(srcset=`img/carpet/carpet-img-${num}-mob.webp`, type="image/webp")
-                                                img.work__img(loading="lazy", src=`img/carpet/carpet-img-${num}-mob.jpg`, alt="")
+                                                source(srcset=`img/carpet/carpet-img-${num}.webp`, type="image/webp")
+                                                img.work__img(loading="lazy", src=`img/carpet/carpet-img-${num}.jpg`, alt="")
                             .swiper-slide
+                                p.text-center Фотогрфії робіт будуть завантажені згодом
                                 .row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
-                                    each num in [1,2,3,4]
-                                        a.col(href=`img/cleaning/cleaning-img-${num}.webp`) 
-                                            picture.work
-                                                source(srcset=`img/cleaning/cleaning-img-${num}-mob.webp`, type="image/webp")
-                                                img.work__img(loading="lazy", src=`img/cleaning/cleaning-img-${num}-mob.jpg`, alt="")
+                                    
+                                    //- each num in [1,2,3,4]
+                                    //-     a.col(href=`img/cleaning/cleaning-img-${num}.webp`) 
+                                    //-         picture.work
+                                    //-             source(srcset=`img/cleaning/cleaning-img-${num}-mob.webp`, type="image/webp")
+                                    //-             img.work__img(loading="lazy", src=`img/cleaning/cleaning-img-${num}-mob.jpg`, alt="")
                             .swiper-slide
+                                p.text-center Фотогрфії робіт будуть завантажені згодом
                                 .row.gallery.row-cols-2.row-cols-sm-2.row-cols-md-4
-                                    each num in [1,2,3,4]
-                                        a.col(href=`img/window/window-img-${num}.webp`) 
-                                            picture.work
-                                                source(srcset=`img/window/window-img-${num}-mob.webp`, type="image/webp")
-                                                img.work__img(loading="lazy", src=`img/window/window-img-${num}-mob.jpg`, alt="")
+                                    
+                                    //- each num in [1,2,3,4]
+                                    //-     a.col(href=`img/window/window-img-${num}.webp`) 
+                                    //-         picture.work
+                                    //-             source(srcset=`img/window/window-img-${num}-mob.webp`, type="image/webp")
+                                    //-             img.work__img(loading="lazy", src=`img/window/window-img-${num}-mob.jpg`, alt="")
             .col-12(data-aos="fade-up", data-aos-delay="400") 
                 .row.g-2.justify-content-center 
                     include cta-buttons

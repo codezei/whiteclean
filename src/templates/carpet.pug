@@ -4,9 +4,9 @@ prepend html
   - const lang = "pl";
 
 prepend head
-  - const pageTitle = "Czyszczenie Dywanów Gdańsk | Gmax – Profesjonalna Usługa Prania Dywanów"
-  - const pageDescription = "Profesjonalne czyszczenie dywanów w Gdańsku i okolicach – skutecznie usuwamy plamy, brud i zapachy. Doświadczony zespół, nowoczesny sprzęt i szybkie terminy realizacji. Gmax – ekspert w praniu dywanów."
-  - const pageKeywords = "czyszczenie dywanów Gdańsk, pranie dywanów, czyszczenie dywanu, usuwanie plam z dywanów, Gmax Gdańsk"
+  - const pageTitle = "Хімчистка коврів у Празі | White Clean"
+  - const pageDescription = "Професійна хімчистка килимів у Празі та околицях. White Clean видаляє бруд, пил і плями, повертає кольорам яскравість і свіжість."
+  - const pageKeywords = "хімчистка коврів Прага, хімчистка килимів Прага, чистка ковроліну Прага, професійна чистка коврів Прага, екологічна хімчистка коврів Прага, White Clean Прага"
   - const pageUrl = "carpet.html"
   - const pageImage = "img/service-carpet.jpg"
   - const twitterImage = "img/service-carpet.jpg"
@@ -17,23 +17,23 @@ append head
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "Czyszczenie dywanów",
+      "serviceType": "Хімчистка килимів",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Gmax",
-        "url": "https://gmax.com.pl/",
-        "telephone": "+48 452 230 843"
+        "name": "White Clean",
+        "url": "https://whiteclean.cz/",
+        "telephone": "+420 XXX XXX XXX"
       },
-      "url": "https://gmax.com.pl/carpet.html",
+      "url": "https://whiteclean.cz/carpet.html",
       "areaServed": {
         "@type": "Place",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Gdańsk",
-          "addressCountry": "PL"
+          "addressLocality": "Прага",
+          "addressCountry": "CZ"
         }
       },
-      "description": "Skuteczne czyszczenie dywanów z odbiorem i dowozem. Usuwanie plam, zapachów i głębokich zabrudzeń. Gdańsk i okolice."
+      "description": "Професійна хімчистка килимів у Празі та околицях. Видаляємо пил, бруд та плями, повертаємо яскравість кольорів і подовжуємо термін служби килимів."
     }
 
 
@@ -41,6 +41,7 @@ append content
   include components/header
   main
     include components/carpet/details
+    include components/price
     include components/cta
     include components/reviews
     include components/contacts

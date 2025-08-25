@@ -492,23 +492,23 @@
 
     function why() {
       // let processSlider = new BeerSlider( document.getElementById( "process-slider" ) );
-      var categories = document.querySelectorAll('.why .category');
-      var whySwiper = new Swiper(".why-swiper", {
-        spaceBetween: 10,
-        autoHeight: true,
-        on: {
-          slideChange: function slideChange(e) {
-            document.querySelector('.why .category.active').classList.remove('active');
-            document.querySelector(".why .category[data-slide=\"".concat(e.activeIndex, "\"]")).classList.add('active');
-          }
-        }
-      });
-
-      for (var c = 0; c < categories.length; c++) {
-        categories[c].addEventListener('click', function (e) {
-          whySwiper.slideTo(e.currentTarget.dataset.slide);
-        });
-      }
+      // let categories = document.querySelectorAll('.why .category')
+      // let whySwiper = new Swiper(".why-swiper", {
+      //     spaceBetween: 10,
+      //     autoHeight: true,
+      //     on: {
+      //         slideChange: function (e) {
+      //             document.querySelector('.why .category.active').classList.remove('active')
+      //             document.querySelector(`.why .category[data-slide="${e.activeIndex}"]`).classList.add('active')
+      //         }
+      //     }
+      // });
+      // for(let c = 0; c < categories.length; c++) {
+      //     categories[c].addEventListener('click', function (e) {
+      //         whySwiper.slideTo(e.currentTarget.dataset.slide)
+      //     })
+      // }
+      var furnitureSlider = new BeerSlider(document.getElementById("furniture-slider"));
     }
 
     function accordion () {

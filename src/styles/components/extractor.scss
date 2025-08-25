@@ -18,7 +18,7 @@
     right: calc(100% - var(--offset-side) + 1rem);
     height: 100%;
     width: 100%;
-    background: url(../img/extractor.png);
+    background: url(../img/extractor.webp);
     background-size: auto 100%;
     background-position: right top;
     background-repeat: no-repeat;
@@ -34,6 +34,10 @@
     margin: 0;
     // opacity: 0;
     // animation: slide-text 1s 0.5s forwards;
+  }
+
+  @media screen and (max-width: 575px) {
+    padding: 1rem 0 1rem var(--offset-side);
   }
 
 }

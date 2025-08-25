@@ -4,9 +4,9 @@ prepend html
   - const lang = "pl";
 
 prepend head
-  - const pageTitle = "Czyszczenie Mebli Tapicerowanych Gdańsk | Gmax – Profesjonalna Usługa Prania"
-  - const pageDescription = "Profesjonalne czyszczenie mebli tapicerowanych w Gdańsku – kanapy, fotele, narożniki. Skutecznie usuwamy plamy, brud i zapachy. Fachowy zespół, bezpieczne środki i szybki dojazd. Gmax – czystość, której możesz zaufać."
-  - const pageKeywords = "czyszczenie mebli tapicerowanych Gdańsk, pranie kanapy, pranie narożnika, czyszczenie fotela, czyszczenie tapicerki, Gmax Gdańsk"
+  - const pageTitle = "Хімчистка оббивки меблів у Празі | White Clean"
+  - const pageDescription = "Професійна хімчистка диванів, крісел та стільців у Празі та околицях. White Clean видаляє плями, пил і запахи, повертаючи меблям свіжість та охайний вигляд."
+  - const pageKeywords = "хімчистка меблів Прага, хімчистка оббивки Прага, хімчистка дивану Прага, хімчистка крісел Прага, професійна хімчистка меблів Прага, чистка меблів від плям Прага, White Clean Прага"
   - const pageUrl = "furniture.html"
   - const pageImage = "img/service-furniture.jpg"
   - const twitterImage = "img/service-furniture.jpg"
@@ -18,23 +18,23 @@ append head
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "Czyszczenie mebli tapicerowanych",
+      "serviceType": "Хімчистка оббивки меблів",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Gmax",
-        "url": "https://gmax.com.pl/",
-        "telephone": "+48 452 230 843"
+        "name": "White Clean",
+        "url": "https://whiteclean.cz/",
+        "telephone": "+420 123 456 789"
       },
-      "url": "https://gmax.com.pl/furniture.html",
+      "url": "https://whiteclean.cz/furniture.html",
       "areaServed": {
         "@type": "Place",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Gdańsk",
-          "addressCountry": "PL"
+          "addressLocality": "Прага",
+          "addressCountry": "CZ"
         }
       },
-      "description": "Profesjonalne czyszczenie kanap, foteli i narożników. Szybko, bezpiecznie i z dojazdem do klienta na terenie Gdańska."
+      "description": "Професійна хімчистка диванів, крісел та стільців у Празі та околицях. White Clean видаляє плями, пил та запахи, повертаючи меблям свіжість та охайний вигляд."
     }
 
 
@@ -42,6 +42,7 @@ append content
   include components/header
   main
     include components/furniture/details
+    include components/price
     include components/cta
     include components/reviews
     include components/contacts

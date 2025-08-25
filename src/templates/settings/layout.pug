@@ -3,7 +3,7 @@ block html
   html(lang=lang)
     head
       block head
-        - const domain = "https://codezei.github.io/white-clean/build/"
+        - const domain = "https://codezei.github.io/whiteclean/build/"
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
@@ -28,15 +28,12 @@ block html
         meta(name="twitter:image", content= domain + twitterImage)
 
         block fonts
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">        
-        script(src="js/beer-slider.js")
+        //- script(src="js/beer-slider.js")
     body
       block content
       block scripts
         script(src="js/swiper-bundle.min.js")
         script(src="js/aos.js")
-        //- script(src="js/beer-slider.js")
+        script(src="js/beer-slider.js")
         script(src="js/lightgallery.min.js")
         script(src="js/main.js")

@@ -4,9 +4,9 @@ prepend html
   - const lang = "pl";
 
 prepend head
-  - const pageTitle = "Mycie Okien Gdańsk | Gmax – Profesjonalne Mycie i Polerowanie Szyb"
-  - const pageDescription = "Profesjonalne mycie i polerowanie szyb w Gdańsku – domy, mieszkania, biura i witryny sklepowe. Czystość bez smug i zacieków. Doświadczenie, dokładność i bezpieczne środki. Gmax – krystaliczny efekt."
-  - const pageKeywords = "mycie okien Gdańsk, czyszczenie szyb, polerowanie okien, mycie witryn, mycie szyb zewnętrznych, Gmax Gdańsk"
+  - const pageTitle = "Мийка вікон у Празі | White Clean"
+  - const pageDescription = "White Clean — професійна мийка вікон у Празі та околицях. Ідеальна чистота без розводів, навіть у важкодоступних місцях."
+  - const pageKeywords = "мийка вікон Прага, професійна мийка вікон Прага, миття вікон без розводів Прага, миття вікон у квартирах Прага, миття офісних вікон Прага, клінінг вікон Прага, White Clean Прага"
   - const pageUrl = "window.html"
   - const pageImage = "img/service-window.jpg"
   - const twitterImage = "img/service-window.jpg"
@@ -18,23 +18,23 @@ append head
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "Mycie i polerowanie szyb",
+      "serviceType": "Мийка вікон",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Gmax",
-        "url": "https://gmax.com.pl/",
-        "telephone": "+48 452 230 843"
+        "name": "White Clean",
+        "url": "https://whiteclean.cz/",
+        "telephone": "+420 XXX XXX XXX"
       },
-      "url": "https://gmax.com.pl/window.html",
+      "url": "https://whiteclean.cz/window.html",
       "areaServed": {
         "@type": "Place",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Gdańsk",
-          "addressCountry": "PL"
+          "addressLocality": "Прага",
+          "addressCountry": "CZ"
         }
       },
-      "description": "Profesjonalne mycie i polerowanie szyb – mieszkania, domy, biura i witryny. Lśniące efekty bez smug i zacieków."
+      "description": "Професійна мийка вікон у квартирах, будинках та офісах у Празі та околицях. Ідеальна чистота без розводів і плям."
     }
 
 
@@ -42,6 +42,7 @@ append content
   include components/header
   main
     include components/window/details
+    include components/price
     include components/cta
     include components/reviews
     include components/contacts

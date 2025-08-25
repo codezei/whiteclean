@@ -1,48 +1,52 @@
-section.block.details.custom-bg-light  
+section.details.bg.bg-dark
   .container 
-    .row.justify-content-around.align-items-center 
-      .col-12.col-lg-6 
-        h1.details__title Czyszczenie Mebli Tapicerowanych – Skutecznie i Bezpiecznie
-        p.details__description.custom-bg-light Oferujemy profesjonalne czyszczenie kanap, foteli, narożników i innych mebli tapicerowanych. Usuwamy plamy, zabrudzenia i zapachy, przywracając świeżość i estetykę Twoim wnętrzom. Wieloletnie doświadczenie i sprawdzone metody to gwarancja skuteczności i bezpieczeństwa dla każdej tkaniny.
-        ul 
-          li 
-            b.text-bold Głębokie czyszczenie: 
-            | Usuwamy zabrudzenia z warstw wewnętrznych materiału.
-          li 
-            b.text-bold Bezpieczne środki czyszczące: 
-            | Dobierane indywidualnie do rodzaju tkaniny.
-          li 
-            b.text-bold Usuwanie plam i zapachów: 
-            | Skuteczne działanie przy zachowaniu delikatności dla materiału.
-          li 
-            b.text-bold Fachowa obsługa: 
-            | Doświadczeni specjaliści, nowoczesny sprzęt i indywidualne podejście.
-          li 
-            b.text-bold Szybka realizacja: 
-            | Możliwość dojazdu do klienta na terenie Gdańska i okolic.
-      .col-12.col-lg-6.col-xl-5.col-xxl-4 
-        .swiper.details-swiper
-          .swiper-wrapper 
-            each num in [1,2,3,4]
-              .swiper-slide 
-                picture.work
-                  source(srcset=`img/furniture/furniture-img-${num}-mob.webp`, type="image/webp")
-                  img.work__img(src=`img/furniture/furniture-img-${num}-mob.jpg`, alt=`Czyszczenie mebli tapicerowanych – zdjęcie ${num}`)
-          .swiper-button-next
-          .swiper-button-prev
-        .swiper.details-swiper-thumb 
-          .swiper-wrapper 
-            each num in [1,2,3,4]
-              .swiper-slide 
-                picture.work
-                  source(srcset=`img/furniture/furniture-img-${num}-mob.webp`, type="image/webp")
-                  img.work__img(src=`img/furniture/furniture-img-${num}-mob.jpg`, alt="")
-      .col-12
-        .row.justify-content-center
-            .col-auto
-                a.btn.btn-primary.btn-normal(href="#cta") Umów się
-            .col-auto
-                a.btn.btn-secondary.btn-normal(href="tel:+48452230843") 
-                    svg.icon.shake(xmlns="http://www.w3.org/2000/svg", width="16", height="16", fill="currentColor", viewBox="0 0 16 16")
-                        path(fill-rule="evenodd", d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z")
-                    | Zadzwoń
+    .row.flex-column-reverse.flex-lg-row
+      .col-12.col-lg-8.align-self-center 
+        .block
+          .row.g-4 
+            .col-12(data-aos="fade-left")
+              h1.details__title.mb-0.text-uppercase Хімчистка оббивки диванів, крісел, стільців та іншої м’якої меблі у Празі та околицях
+            .col-12
+                .details__subtitle.extractor 
+                    .extractor__cleaner(data-aos="fade-left", data-aos-delay="200") 
+                    h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left", data-aos-delay="300") Повернемо вашій м’якій меблі свіжість та охайний вигляд. Видаляємо плями, пил, алергени й неприємні запахи за допомогою професійного обладнання та безпечних засобів.
+            .col-12(data-aos="fade-left", data-aos-delay="400") 
+              ul.m-0
+                li Глибоке очищення тканини та наповнювача
+                li Видалення плям від їжі, напоїв та побутового бруду
+                li Усунення неприємних запахів і алергенів
+                li Безпечні засоби для людей і тварин
+                li Подовження терміну служби меблів
+                li Виїзд у зручний для вас час у Празі та околицях
+            .col-12(data-aos="fade-left", data-aos-delay="500")  
+              .row.g-2.justify-content-center.justify-content-sm-start 
+                include ../cta-buttons
+      .col-12.col-lg-4
+          .mask
+              .triangle.triangle-135.top-inner.left-inner
+              .triangle.triangle-45.top-inner.right-inner
+              .triangle.triangle-225.bottom-inner.left-inner
+              .triangle.triangle-315.bottom-inner.right-inner
+              .triangle.triangle-45.top-inner.left-outer.offset-x-p
+              .triangle.triangle-135.top-inner.right-outer.offset-x-p
+              .triangle.triangle-225.bottom-inner.right-outer.offset-x-p.d-none.d-lg-block
+              .triangle.triangle-315.triangle-fill.bottom-inner.right-inner.offset-x-n.d-lg-none.correction-y-n
+              .line.line-v-100.top-inner.right-outer
+              .line.line-v-50.top-inner.left-outer
+              .line.line-h-100.bottom-inner.left-inner.d-lg-none.correction-y-n
+              .rectangle.rectangle-50.left-inner.bottom-inner
+                  .triangle.triangle-225.left-inner.top-outer
+                  .triangle.triangle-225.bottom-inner.right-outer
+                  .triangle.triangle-225.triangle-fill.left-inner.offset-x-n.top-outer.correction-y-n
+                  .rectangle.rectangle-100.rectangle-fill.left-inner.offset-x-n.bottom-inner.correction-y-n
+                  .triangle.triangle-225.triangle-fill.bottom-inner.right-outer.offset-x-n.correction-y-n
+              img.mask__img(src="img/service-furniture.jpg", alt="", data-aos="fade-in")
+              .mask__inner(data-aos="fade-down", data-aos-delay="200") 
+                  .text-center
+                      img(src="img/logo.png", alt="", width="50")
+                  .h3.text-center.text-uppercase.text-bold White Clean
+                  p.text-center.text-light Прага, Чешская Будиевица, Чешский Крумлов, Прахатице, Писек, Табор, Їндржихув-Градец, Страконице
+                      //- br
+                      //- span Пн. - Сб. 
+                      //- span.text-digits 7.00 - 22.00
+                  include ../socials
