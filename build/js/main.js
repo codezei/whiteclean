@@ -467,34 +467,6 @@
       }());
     }
 
-    function details() {
-      var detailsSwiperThumb = new Swiper(".details-swiper-thumb", {
-        spaceBetween: 8,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-        on: {
-          slideChange: function slideChange(slider) {
-            if (detailsSwiper) {
-              detailsSwiper.slideTo(slider.activeIndex);
-            }
-          }
-        }
-      });
-      var detailsSwiper = new Swiper(".details-swiper", {
-        spaceBetween: 8,
-        autoHeight: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        },
-        thumbs: {
-          swiper: detailsSwiperThumb,
-          multipleActiveThumbs: false
-        }
-      });
-    }
-
     function why() {
       // let processSlider = new BeerSlider( document.getElementById( "process-slider" ) );
       // let categories = document.querySelectorAll('.why .category')
@@ -1300,7 +1272,6 @@
       reviews();
       cta();
       works();
-      details();
       why();
       accordion();
       price();
@@ -1313,4 +1284,3 @@
     });
 
 }());
-//# sourceMappingURL=main.js.map

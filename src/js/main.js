@@ -6,7 +6,6 @@ import header from './modules/header'
 import services from './modules/services'
 import reviews from './modules/reviews'
 import cta from './modules/cta'
-import details from './modules/details'
 import why from './modules/why'
 import accordion from './modules/accordion'
 import 'regenerator-runtime/runtime';
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	reviews()
 	cta()
 	works()
-	details()
 	why()
 	accordion()
 	price()
