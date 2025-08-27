@@ -5,13 +5,13 @@ section.promo#promo.bg.bg-dark
                 .block 
                     .row.g-4 
                         .col-12
-                            h1.h2.promo__title.text-uppercase.mb-0(data-aos="fade-left", data-aos-delay="300") 
+                            h1.h2.promo__title.text-uppercase.mb-0(data-aos="fade-left", data-aos-delay="200") 
                                 span Хімчистка оббивки меблів, матраців, килимів. Клінінг приміщень, мийка вікон.
                         .col-12
                             .promo__subtitle.extractor 
-                                .extractor__cleaner(data-aos="fade-left", data-aos-delay="500") 
-                                h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left", data-aos-delay="700") Ми ефективно видаляємо бруд за допомогою професійного обладнання. Ваша оселя знову виглядатиме як нова.
-                        .col-12(data-aos="fade-left", data-aos-delay="800")
+                                .extractor__cleaner(data-aos="fade-left", data-aos-delay="300") 
+                                h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left", data-aos-delay="400") Ми ефективно видаляємо бруд за допомогою професійного обладнання. Ваша оселя знову виглядатиме як нова.
+                        .col-12(data-aos="fade-in", data-aos-delay="500")
                             .row.g-2.justify-content-center.justify-content-sm-start 
                                 include cta-buttons
             .col-12.col-lg-4
@@ -33,13 +33,16 @@ section.promo#promo.bg.bg-dark
                         .triangle.triangle-225.triangle-fill.left-inner.offset-x-n.top-outer.correction-y-n
                         .rectangle.rectangle-100.rectangle-fill.left-inner.offset-x-n.bottom-inner.correction-y-n
                         .triangle.triangle-225.triangle-fill.bottom-inner.right-outer.offset-x-n.correction-y-n
-                    img.mask__img(src="img/promo-img.jpg", alt="", data-aos="fade-in")
-                    .mask__inner(data-aos="fade-down", data-aos-delay="200") 
-                        .text-center
-                            img(src="img/logo.png", alt="", width="50")
-                        .h3.text-center.text-uppercase.text-bold White Clean
-                        p.text-center.text-light Прага, Чешская Будиевица, Чешский Крумлов, Прахатице, Писек, Табор, Їндржихув-Градец, Страконице
-                            //- br
-                            //- span Пн. - Сб. 
-                            //- span.text-digits 7.00 - 22.00
-                        include socials
+                    picture 
+                        source(srcset="img/promo-img-mob.webp", type="image/webp", media="(max-width: 575px)")
+                        source(srcset="img/promo-img-mob.jpg", media="(max-width: 575px)")
+                        source(srcset="img/promo-img.webp", type="image/webp")
+                        img.mask__img(src="img/promo-img.jpg", alt="", data-aos="fade-in")
+                    .mask__inner(data-aos="fade-down", data-aos-delay="100") 
+                        //- .text-center
+                        //-     img(src="img/logo.png", alt="", width="50")
+                        //- .h3.text-center.text-uppercase.text-bold White Clean
+                        .text-center.text-light 
+                            b.text-bold Ми працюємо в містах: 
+                            | Чешская Будиевица, Чешский Крумлов, Прахатице, Писек, Табор, Їндржихув-Градец, Страконице
+                        //- include socials

@@ -4,7 +4,7 @@ section#price.price.block.bg-white
             .col-12(data-aos="fade-right")
                 h2.price__title.text-uppercase Ціни
                 h3.price__subtitle.h6.text-light.mb-0 Оберіть категорію та дізнайтесь ціни на послуги, що потрібні саме вам.
-            .col-12(data-aos="fade-in", data-aos-delay="200")
+            .col-12(data-aos="fade-in", data-aos-delay="100")
                 .categories-navigation
                     .price-categories-swiper 
                         .swiper-button-next.categories-button-arrow
@@ -29,12 +29,13 @@ section#price.price.block.bg-white
                                 button.btn.btn-primary.btn-small.category-btn(type="button") 
                                     .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
                                     .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
-                                    span.category-btn__text Клінінг
+                                    span.category-btn__text Вікна
                             .swiper-slide
                                 button.btn.btn-primary.btn-small.category-btn(type="button") 
                                     .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
                                     .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
-                                    span.category-btn__text Вікна
+                                    span.category-btn__text Клінінг
+
                 .categories-content
                     .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
                     .triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
@@ -47,9 +48,10 @@ section#price.price.block.bg-white
                             .swiper-slide
                                 include price/carpet
                             .swiper-slide
-                                include price/cleaning
-                            .swiper-slide
                                 include price/window
-            .col-12(data-aos="fade-up", data-aos-delay="400") 
+                            .swiper-slide
+                                include price/cleaning
+
+            .col-12(data-aos="fade-in", data-aos-delay="200") 
                 .row.g-2.justify-content-center 
                     include cta-buttons

@@ -4,9 +4,9 @@ prepend html
   - const lang = "pl";
 
 prepend head
-  - const pageTitle = "Хімчистка матраців у Празі | White Clean"
-  - const pageDescription = "White Clean — професійна хімчистка матраців у Празі та околицях. Видаляємо пил, алергени та запахи, забезпечуючи чистоту й здоровий сон."
-  - const pageKeywords = "хімчистка матраців Прага, чистка матраців від пилу Прага, професійна хімчистка матраців Прага, екологічна хімчистка матраців Прага, чистка матраців від плям Прага, White Clean Прага"
+  - const pageTitle = "Хімчистка матраців у Празі | White Clean - Чешская Будиевица, Чешский Крумлов, Прахатице, Писек, Табор, Їндржихув-Градец, Страконице."
+  - const pageDescription = "Професійна хімчистка матраців. Видаляємо пил, алергени та запахи, забезпечуючи чистоту й здоровий сон."
+  - const pageKeywords = "хімчистка матраців, чистка матраців від пилу, професійна хімчистка матраців, екологічна хімчистка матраців, чистка матраців від плям"
   - const pageUrl = "mattress.html"
   - const pageImage = "img/service-mattress.jpg"
   - const twitterImage = "img/service-mattress.jpg"
@@ -26,25 +26,78 @@ append head
         "telephone": "+420 XXX XXX XXX"
       },
       "url": "https://whiteclean.cz/mattress.html",
-      "areaServed": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Прага",
-          "addressCountry": "CZ"
-        }
-      },
-      "description": "Професійна хімчистка матраців у Празі та околицях. Видаляємо пил, алергени та запахи, забезпечуючи чистоту й здоровий сон."
+      "areaServed": [
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Чешская Будиевица",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Чешский Крумлов",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Прахатице",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Писек",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Табор",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Їндржихув-Градец",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Страконице",
+            "addressCountry": "CZ"
+          }
+        },
+      ],
+      "description": "Професійна хімчистка матраців. Видаляємо пил, алергени та запахи, забезпечуючи чистоту й здоровий сон."
     }
 
 
 append content
-  include components/header
+  script. 
+    const initialCategory = 1;
+  include components/header-2
   main
     include components/mattress/details
     include components/price
     include components/cta
     include components/reviews
+    include components/works
     include components/contacts
     include components/popup
   include components/footer

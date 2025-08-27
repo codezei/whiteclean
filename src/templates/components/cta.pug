@@ -21,17 +21,21 @@ section.cta#cta.bg.bg-dark
                         .triangle.triangle-225.triangle-fill.left-inner.offset-x-n.top-outer.correction-y-n
                         .rectangle.rectangle-100.rectangle-fill.left-inner.offset-x-n.bottom-inner.correction-y-n
                         .triangle.triangle-225.triangle-fill.bottom-inner.right-outer.offset-x-n.correction-y-n
-                    img.mask__img(src="img/cta-img.jpg", alt="")
-                    .mask__inner(data-aos="fade-down")
+                    picture 
+                        source(srcset="img/cta-img-mob.webp", type="image/webp", media="(max-width: 575px)")
+                        source(srcset="img/cta-img-mob.jpg", media="(max-width: 575px)")
+                        source(srcset="img/cta-img.webp", type="image/webp")
+                        img.mask__img(src="img/cta-img.jpg", alt="", data-aos="fade-in")
+                    .mask__inner(data-aos="fade-down", data-aos-delay="100")
                         h2.mask__title З'єднатись з нами
                         //- h3.h6.mask__subtitle 
             .col-12.col-lg-8.align-self-center
                 .block
                     .row.g-4
-                        .col-12(data-aos="fade-down", data-aos-delay="400")
+                        .col-12(data-aos="fade-down", data-aos-delay="200")
                             h3.h2.cta__title.text-center.text-uppercase Маєте запитання? Напишіть нам!
                             h4.cta__subtitle.h6.text-center.text-light.mb-0 Заповніть форму, і ми зв'яжемося з вами якомога швидше.
-                        .col-12(data-aos="fade-in", data-aos-delay="600")
+                        .col-12(data-aos="fade-in", data-aos-delay="300")
                             form.cta__form#cta-form(method="POST")
                                 .row.g-2 
                                     .col-6 
@@ -54,14 +58,15 @@ section.cta#cta.bg.bg-dark
                                             .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
                                             .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
                                             .triangle.triangle-extra-small.triangle-315.bottom-inner.right-inner.bordered
-                                            select#service(name="work" required multiple).cta__input.input
-                                                option(value="" disabled selected) Оберіть послугу (Декілька Ctrl + Click)
-                                                option(value="Pranie tapicerki meblowej") Оббивка меблів
-                                                option(value="Czyszczenie dywanów") Чистка коврів
-                                                option(value="Mycie i polerowanie szyb") Мийка вікон
-                                                option(value="Czyszczenie zasłon i rolet") Клінінг приміщень
-                                                option(value="Pranie materacy") Чистка матрасів
-                                                option(value="Pranie materacy") Інше
+                                            .select-wrap
+                                                label(for="service") Оберіть одну або декілька послуг (затисніть Ctrl/⌘ для вибору кількох)
+                                                select#service(name="service" required multiple).cta__input.input
+                                                    option(value="Pranie tapicerki meblowej") Оббивка меблів
+                                                    option(value="Czyszczenie dywanów") Чистка коврів
+                                                    option(value="Mycie i polerowanie szyb") Мийка вікон
+                                                    option(value="Czyszczenie zasłon i rolet") Клінінг приміщень
+                                                    option(value="Pranie materacy") Чистка матрасів
+                                                    option(value="Inne") Інше
                                     .col-12 
                                         button.btn.btn-primary.btn-normal.btn-rhombus.cta__btn(type="submit") 
                                             .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered

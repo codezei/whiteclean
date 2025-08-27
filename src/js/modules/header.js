@@ -15,7 +15,8 @@ export default function header () {
     })
 
     let linkNav = document.querySelectorAll('[href^="#"]')
-	let headerHeight = header.getBoundingClientRect().height
+	let headerHeight = 0
+	// let headerHeight = header.getBoundingClientRect().height
 	let V = 0.2;
 	for (let i = 0; i < linkNav.length; i++) {
 		linkNav[i].addEventListener('click', function (e) {

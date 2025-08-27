@@ -1,18 +1,19 @@
 section.faq#faq.bg.bg-dark
     .container
         .row.flex-column-reverse.flex-lg-row 
-            .col-12.col-lg-8 
+            .col-12.col-lg-8(data-aos="fade-in", data-aos-delay="200") 
                 .block
                     //- h2.faq__title.text-uppercase Najczęstsze pytania
                     .accordion
-                        .accordion-item.card.card-primary-outline(data-aos="fade-in-right", data-aos-delay="400")
+                        .accordion-item.card.card-primary-outline
                             .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
                             .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
                             .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
                             .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
                             .accordion-item__header
                                 h6.accordion-item__title Як часто слід чистити м’які меблі?
-                                button.accordion-item__btn.btn.btn-small.btn-primary(type="button") 
+                                button.accordion-item__btn.btn.btn-small.btn-primary#accordion-btn-1(type="button", aria-expanded="false", aria-controls="faq-item-1") 
+                                    span.sr-only Toggle cards
                                     .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
                                     .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
                                     .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
@@ -21,17 +22,18 @@ section.faq#faq.bg.bg-dark
                                         use(href="#plus")
                                     svg.icon.in-inactive-none(width="16", height="16")
                                         use(href="#minus")
-                            .accordion-item__body
+                            .accordion-item__body#faq-item-1(aria-labelledby="accordion-btn-1")
                                 div Ми рекомендуємо професійно чистити оббивку меблів кожні 6–12 місяців. У будинках, де є діти, домашні тварини або люди, які страждають на алергію, варто робити це частіше, щоб ваші меблі залишалися чистими та свіжими.
 
-                        .accordion-item.card.card-primary-outline(data-aos="fade-in-right", data-aos-delay="500") 
+                        .accordion-item.card.card-primary-outline
                             .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
                             .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
                             .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
                             .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
                             .accordion-item__header
                                 h6.accordion-item__title Чи можна видалити всі плями?
-                                button.accordion-item__btn.btn.btn-small.btn-primary(type="button") 
+                                button.accordion-item__btn.btn.btn-small.btn-primary#accordion-btn-2(type="button", aria-expanded="false", aria-controls="faq-item-2") 
+                                    span.sr-only Toggle cards
                                     .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
                                     .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
                                     .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
@@ -40,17 +42,18 @@ section.faq#faq.bg.bg-dark
                                         use(href="#plus")
                                     svg.icon.in-inactive-none(width="16", height="16")
                                         use(href="#minus")
-                            .accordion-item__body
+                            .accordion-item__body#faq-item-2(aria-labelledby="accordion-btn-2")
                                 div Більшість плям можна ефективно видалити, але все залежить від типу плями, часу її перебування та попередніх спроб очищення. Деякі стійкі плями можуть залишати незначні зміни кольору.
 
-                        .accordion-item.card.card-primary-outline(data-aos="fade-in-right", data-aos-delay="600")  
+                        .accordion-item.card.card-primary-outline
                             .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
                             .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
                             .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
                             .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
                             .accordion-item__header
                                 h6.accordion-item__title Скільки часу потрібно, щоб оббивка висохла після чищення?
-                                button.accordion-item__btn.btn.btn-small.btn-primary(type="button") 
+                                button.accordion-item__btn.btn.btn-small.btn-primary#accordion-btn-3(type="button", aria-expanded="false", aria-controls="faq-item-3") 
+                                    span.sr-only Toggle cards
                                     .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
                                     .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
                                     .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
@@ -59,17 +62,18 @@ section.faq#faq.bg.bg-dark
                                         use(href="#plus")
                                     svg.icon.in-inactive-none(width="16", height="16")
                                         use(href="#minus")
-                            .accordion-item__body
+                            .accordion-item__body#faq-item-3(aria-labelledby="accordion-btn-3")
                                 div Час висихання залежить від матеріалу та умов у приміщенні. Зазвичай це займає від 5 до 12 годин. Висихання відбувається швидше в теплому, провітрюваному місці.
 
-                        .accordion-item.card.card-primary-outline(data-aos="fade-in-right", data-aos-delay="700")  
+                        .accordion-item.card.card-primary-outline 
                             .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
                             .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
                             .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
                             .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
                             .accordion-item__header
                                 h6.accordion-item__title Чи безпечні засоби для чищення для дітей та домашніх тварин?
-                                button.accordion-item__btn.btn.btn-small.btn-primary(type="button") 
+                                button.accordion-item__btn.btn.btn-small.btn-primary#accordion-btn-4(type="button", aria-expanded="false", aria-controls="faq-item-4") 
+                                    span.sr-only Toggle cards
                                     .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
                                     .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
                                     .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
@@ -78,17 +82,18 @@ section.faq#faq.bg.bg-dark
                                         use(href="#plus")
                                     svg.icon.in-inactive-none(width="16", height="16")
                                         use(href="#minus")
-                            .accordion-item__body
+                            .accordion-item__body#faq-item-4(aria-labelledby="accordion-btn-4")
                                 div Так. Ми використовуємо сертифіковані засоби, які є безпечними та не викликають алергії. Після чищення ми рекомендуємо не користуватися меблями, доки вони повністю не висохнуть.
 
-                        .accordion-item.card.card-primary-outline(data-aos="fade-in-right", data-aos-delay="800")  
+                        .accordion-item.card.card-primary-outline
                             .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
                             .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
                             .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
                             .triangle.triangle-small.triangle-315.bottom-inner.right-inner.bordered
                             .accordion-item__header
                                 h6.accordion-item__title Як підготувати меблі до чищення?
-                                button.accordion-item__btn.btn.btn-small.btn-primary(type="button") 
+                                button.accordion-item__btn.btn.btn-small.btn-primary#accordion-btn-5(type="button", aria-expanded="false", aria-controls="faq-item-5") 
+                                    span.sr-only Toggle cards
                                     .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered
                                     .triangle.triangle-extra-small.triangle-45.top-inner.right-inner.bordered
                                     .triangle.triangle-extra-small.triangle-225.bottom-inner.left-inner.bordered
@@ -97,7 +102,7 @@ section.faq#faq.bg.bg-dark
                                         use(href="#plus")
                                     svg.icon.in-inactive-none(width="16", height="16")
                                         use(href="#minus")
-                            .accordion-item__body
+                            .accordion-item__body#faq-item-5(aria-labelledby="accordion-btn-5")
                                 div Просто вийміть подушки, ковдри та інші предмети з меблів. Не потрібно їх пересувати чи розставляти — ми подбаємо про все на місці.
             .col-12.col-lg-4 
                 .mask 
@@ -118,8 +123,12 @@ section.faq#faq.bg.bg-dark
                         .triangle.triangle-225.triangle-fill.left-inner.offset-x-n.top-outer.correction-y-n
                         .rectangle.rectangle-100.rectangle-fill.left-inner.offset-x-n.bottom-inner.correction-y-n
                         .triangle.triangle-225.triangle-fill.bottom-inner.right-outer.offset-x-n.correction-y-n
-                    img.mask__img(src="img/faq-img.jpg", alt="", data-aos="fade-in")
-                    .mask__inner(data-aos="fade-down", data-aos-delay="400") 
+                    picture 
+                        source(srcset="img/faq-img-mob.webp", type="image/webp", media="(max-width: 575px)")
+                        source(srcset="img/faq-img-mob.jpg", media="(max-width: 575px)")
+                        source(srcset="img/faq-img.webp", type="image/webp")
+                        img.mask__img(src="img/faq-img.jpg", alt="", data-aos="fade-in")
+                    .mask__inner(data-aos="fade-down", data-aos-delay="100") 
                         h2.mask__title Часті питання
                         h3.h6.mask__subtitle Дізнайтесь відповіді на найчастіші запитання
 

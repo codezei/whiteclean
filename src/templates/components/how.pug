@@ -4,10 +4,10 @@ section.how#how.bg.bg-dark
             .col-12.col-lg-6.col-xl-8.align-self-center 
                 .block
                     .row.g-4.align-items-center.justify-content-center 
-                        .col-12
+                        .col-12(data-aos="fade-in", data-aos-delay="200")
                             .row.g-2 
                                 .col-12.col-sm-6.col-xxl-3
-                                    .card.card-primary-outline(data-aos="fade-in-right", data-aos-delay="500")
+                                    .card.card-primary-outline
                                         .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
                                         .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
                                         .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
@@ -18,7 +18,7 @@ section.how#how.bg.bg-dark
                                         h4.h6.card__title Зв'яжіться з нами
                                         .card__body Ми обговоримо з вами деталі вашого замовлення, уточнивши дату, час та адресу для хімчистки.
                                 .col-12.col-sm-6.col-xxl-3
-                                    .card.card-primary-outline(data-aos="fade-in-right", data-aos-delay="600")
+                                    .card.card-primary-outline
                                         .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
                                         .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
                                         .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
@@ -29,7 +29,7 @@ section.how#how.bg.bg-dark
                                         h4.h6.card__title Виконання замовлення
                                         .card__body У день вашого замовлення наш спеціаліст привезе все необхідне обладнання та засоби для чищення та виконає всю роботу
                                 .col-12.col-sm-6.col-xxl-3
-                                    .card.card-primary-outline(data-aos="fade-in-right", data-aos-delay="700")
+                                    .card.card-primary-outline
                                         .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
                                         .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
                                         .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
@@ -40,7 +40,7 @@ section.how#how.bg.bg-dark
                                         h4.h6.card__title Оплата
                                         .card__body Після завершення роботи ви здійсните оплату зручним для вас способом.
                                 .col-12.col-sm-6.col-xxl-3
-                                    .card.card-primary-outline(data-aos="fade-in-right", data-aos-delay="800")
+                                    .card.card-primary-outline
                                         .triangle.triangle-small.triangle-135.top-inner.left-inner.bordered
                                         .triangle.triangle-small.triangle-45.top-inner.right-inner.bordered
                                         .triangle.triangle-small.triangle-225.bottom-inner.left-inner.bordered
@@ -50,7 +50,7 @@ section.how#how.bg.bg-dark
                                                 use(href="#result")
                                         h4.h6.card__title Готово
                                         .card__body А тепер саме час насолодитися результатами хімчистки
-                        .col-12(data-aos="fade-up", data-aos-delay="900")
+                        .col-12(data-aos="fade-in", data-aos-delay="300")
                             .row.g-2.justify-content-center 
                                 include cta-buttons
             .col-12.col-lg-6.col-xl-4
@@ -72,7 +72,11 @@ section.how#how.bg.bg-dark
                         .triangle.triangle-225.triangle-fill.left-inner.offset-x-n.top-outer.correction-y-n
                         .rectangle.rectangle-100.rectangle-fill.left-inner.offset-x-n.bottom-inner.correction-y-n
                         .triangle.triangle-225.triangle-fill.bottom-inner.right-outer.offset-x-n.correction-y-n
-                    img.mask__img(src="img/how-img.jpg", alt="", data-aos="fade-in")
-                    .mask__inner(data-aos="fade-down", data-aos-delay="400")
+                    picture 
+                        source(srcset="img/how-img-mob.webp", type="image/webp", media="(max-width: 575px)")
+                        source(srcset="img/how-img-mob.jpg", media="(max-width: 575px)")
+                        source(srcset="img/how-img.webp", type="image/webp")
+                        img.mask__img(src="img/how-img.jpg", alt="", data-aos="fade-in")
+                    .mask__inner(data-aos="fade-down", data-aos-delay="100")
                         h2.mask__title Jak pracujemy? 
                         h3.h6.mask__subtitle Подивіться, як виглядає весь процес впровадження послуги.

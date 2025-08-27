@@ -23,6 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	accordion()
 	price()
 
-	AOS.init();
+	AOS.init({
+		offset: 80,
+		duration: 200,
+		easing: 'ease-in',
+		once: true,
+	});
 })
 

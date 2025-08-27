@@ -4,10 +4,10 @@ prepend html
   - const lang = "ua";
 
 prepend head
-  - const pageTitle = "Хімчистка меблів, матраців, коврів, клінінг приміщень і мийка вікон | White Clean Прага та околиці"
+  - const pageTitle = "Хімчистка меблів, матраців, коврів, клінінг приміщень і мийка вікон | White Clean - Чешская Будиевица, Чешский Крумлов, Прахатице, Писек, Табор, Їндржихув-Градец, Страконице."
   - const themeColor = "#ffffff"
-  - const pageDescription = "White Clean — професійна хімчистка меблів, матраців, коврів, клінінг приміщень і мийка вікон у Празі та околицях."
-  - const pageKeywords = "хімчистка меблів Прага, хімчистка оббивки Прага, хімчистка матраців Прага, хімчистка коврів Прага, клінінг приміщень Прага, мийка вікон Прага, професійна хімчистка Прага, прибирання квартир Прага, прибирання офісів Прага, клінінгові послуги Прага, хімчистка дивану Прага, хімчистка крісел Прага, хімчистка килимів та ковроліну Прага, чищення меблів від плям Прага, чищення матрацу від запаху Прага, професійне прибирання Прага та околиці, екологічна хімчистка Прага, хімчистка вдома Прага, миття та полірування вікон Прага, клінінг під ключ Прага, хімчистка меблів Прага та околиці, хімчистка коврів Прага передмістя, прибирання будинків Прага та околиці, клінінгові послуги Прага та регіон"
+  - const pageDescription = "Професійна хімчистка меблів, матраців, коврів, клінінг приміщень і мийка вікон."
+  - const pageKeywords = "хімчистка меблів, хімчистка оббивки, хімчистка матраців, хімчистка коврів, клінінг приміщень, мийка вікон, професійна хімчистка, прибирання квартир, прибирання офісів, клінінгові послуги, хімчистка дивану, хімчистка крісел, хімчистка килимів та ковроліну, чищення меблів від плям, чищення матрацу від запаху, професійне прибирання та околиці, екологічна хімчистка, хімчистка вдома, миття та полірування вікон, клінінг під ключ, хімчистка меблів та околиці, хімчистка коврів передмістя, прибирання будинків та околиці, клінінгові послуги"
   - const pageUrl = "";
   - const pageImage = "img/logo-big.png";
   - const twitterImage = "img/logo-big.png";
@@ -27,24 +27,75 @@ append head
         "addressLocality": "Praha",
         "addressCountry": "CZ"
       },
-      "description": "White Clean — професійна хімчистка меблів, матраців, коврів, клінінг приміщень і мийка вікон у Празі та околицях.",
-      "areaServed": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Praha",
-          "addressCountry": "CZ"
-        }
-      }
+      "description": "White Clean — професійна хімчистка меблів, матраців, коврів, клінінг приміщень і мийка вікон.",
+      "areaServed": [
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Чешская Будиевица",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Чешский Крумлов",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Прахатице",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Писек",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Табор",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Їндржихув-Градец",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Страконице",
+            "addressCountry": "CZ"
+          }
+        },
+      ]
     }
 
 
 append content
+  script. 
+    const initialCategory = 0;
   include components/icons
   include components/header
   main
     include components/promo
-    //- include components/feature
     include components/services
     include components/about
     include components/why

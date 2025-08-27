@@ -20,18 +20,22 @@ section.about#about.bg.bg-dark
                         .triangle.triangle-225.triangle-fill.left-inner.offset-x-n.top-outer.correction-y-n
                         .rectangle.rectangle-100.rectangle-fill.left-inner.offset-x-n.bottom-inner.correction-y-n
                         .triangle.triangle-225.triangle-fill.bottom-inner.right-outer.offset-x-n.correction-y-n
-                    img.mask__img(src="img/about-img.jpg", alt="", data-aos="fade-in")
-                    .mask__inner(data-aos="fade-down", data-aos-delay="400")
+                    picture 
+                        source(srcset="img/about-img-mob.webp", type="image/webp", media="(max-width: 575px)")
+                        source(srcset="img/about-img-mob.jpg", media="(max-width: 575px)")
+                        source(srcset="img/about-img.webp", type="image/webp")
+                        img.mask__img(src="img/about-img.jpg", alt="", data-aos="fade-in")
+                    .mask__inner(data-aos="fade-down", data-aos-delay="100")
                         h2.mask__title Про нас
                         h3.h6.mask__subtitle Команда, яка любить свою справу та цінує ваш&nbsp;час.
             .col-12.col-lg-8.align-self-center 
                 .block
                     .row.g-4.align-items-center.justify-content-center 
                         .col-12.col-xl-10
-                            .about__info(data-aos="fade-left", data-aos-delay="400")
+                            .about__info(data-aos="fade-left", data-aos-delay="200")
                                 p Наші клієнти довіряють нам, тому що ми підходимо до кожної роботи з повним професіоналізмом. Ми спеціалізуємося на чищенні оббивки меблів, матрців, килимів, вікон та клінінгу приміщень. 
                                 p Ми щодня видаляємо різноманітні плями: плями від їжі та напоїв, шерсть домашніх тварин, неприємні запахи, цвіль та въївся пил. 
                                 p Завдяки нашому досвіду, спеціалізованому обладнанню та ефективним засобам для чищення ми ефективно усуваємо всі забруднення, повертаючи свіжість та чистоту, які спонукають наших клієнтів повертатися до нас знову.
-                        .col-12.col-xl-10(data-aos="fade-left", data-aos-delay="500")
+                        .col-12.col-xl-10(data-aos="fade-in", data-aos-delay="300")
                             .row.g-2 
                                 include cta-buttons

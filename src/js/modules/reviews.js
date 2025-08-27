@@ -1,7 +1,7 @@
 export default function () {
     let reviewsSwiper = new Swiper(".reviews-swiper", {
         slidesPerView: 1,
-        spaceBetween: 16,
+        spaceBetween: 8,
         // pagination: {
         //   el: ".swiper-pagination",
         //   clickable: true,

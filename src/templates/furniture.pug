@@ -4,9 +4,9 @@ prepend html
   - const lang = "pl";
 
 prepend head
-  - const pageTitle = "Хімчистка оббивки меблів у Празі | White Clean"
-  - const pageDescription = "Професійна хімчистка диванів, крісел та стільців у Празі та околицях. White Clean видаляє плями, пил і запахи, повертаючи меблям свіжість та охайний вигляд."
-  - const pageKeywords = "хімчистка меблів Прага, хімчистка оббивки Прага, хімчистка дивану Прага, хімчистка крісел Прага, професійна хімчистка меблів Прага, чистка меблів від плям Прага, White Clean Прага"
+  - const pageTitle = "Хімчистка оббивки меблів | White Clean - Чешская Будиевица, Чешский Крумлов, Прахатице, Писек, Табор, Їндржихув-Градец, Страконице."
+  - const pageDescription = "Професійна хімчистка диванів, крісел та стільців. White Clean видаляє плями, пил і запахи, повертаючи меблям свіжість та охайний вигляд."
+  - const pageKeywords = "хімчистка меблів, хімчистка оббивки, хімчистка дивану, хімчистка крісел, професійна хімчистка меблів, чистка меблів від плям"
   - const pageUrl = "furniture.html"
   - const pageImage = "img/service-furniture.jpg"
   - const twitterImage = "img/service-furniture.jpg"
@@ -26,25 +26,78 @@ append head
         "telephone": "+420 123 456 789"
       },
       "url": "https://whiteclean.cz/furniture.html",
-      "areaServed": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Прага",
-          "addressCountry": "CZ"
-        }
-      },
-      "description": "Професійна хімчистка диванів, крісел та стільців у Празі та околицях. White Clean видаляє плями, пил та запахи, повертаючи меблям свіжість та охайний вигляд."
+      "areaServed": [
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Чешская Будиевица",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Чешский Крумлов",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Прахатице",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Писек",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Табор",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Їндржихув-Градец",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Страконице",
+            "addressCountry": "CZ"
+          }
+        },
+      ],
+      "description": "Професійна хімчистка диванів, крісел та стільців. White Clean видаляє плями, пил та запахи, повертаючи меблям свіжість та охайний вигляд."
     }
 
 
 append content
-  include components/header
+  script. 
+    const initialCategory = 0;
+  include components/header-2
   main
     include components/furniture/details
     include components/price
     include components/cta
     include components/reviews
+    include components/works
     include components/contacts
     include components/popup
   include components/footer

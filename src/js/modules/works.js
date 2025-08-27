@@ -1,11 +1,13 @@
 export default function () {
   let galleries = document.querySelectorAll(".gallery");
 
+
   let worksCategoriesSwiper = new Swiper(".works-categories-swiper", {
     spaceBetween: 0,
     slidesPerView: "auto",
     watchSlidesProgress: true,
     slideToClickedSlide: true,
+    initialSlide: initialCategory || 0,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -27,9 +29,10 @@ export default function () {
   });
 
   let worksSwiper = new Swiper(".works-swiper", {
-    spaceBetween: 10,
+    spaceBetween: 8,
     slideToClickedSlide: true,
     watchSlidesProgress: true,
+    initialSlide: initialCategory || 0,
     thumbs: {
       swiper: worksCategoriesSwiper,
       multipleActiveThumbs: false,

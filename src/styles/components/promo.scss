@@ -1,4 +1,7 @@
 .promo {
+    &__title {
+        text-align: center;
+    }
     // background-color: #000;
     // background-image:  url(../img/promo-bg-mob.webp);
     // background-size: cover;
@@ -44,6 +47,7 @@
     }
 
     @media screen and (min-width: 992px) {
+        text-align: left;
         // &__subtitle {
         //     margin-bottom: 3rem;
         // }

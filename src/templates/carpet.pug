@@ -4,9 +4,9 @@ prepend html
   - const lang = "pl";
 
 prepend head
-  - const pageTitle = "Хімчистка коврів у Празі | White Clean"
-  - const pageDescription = "Професійна хімчистка килимів у Празі та околицях. White Clean видаляє бруд, пил і плями, повертає кольорам яскравість і свіжість."
-  - const pageKeywords = "хімчистка коврів Прага, хімчистка килимів Прага, чистка ковроліну Прага, професійна чистка коврів Прага, екологічна хімчистка коврів Прага, White Clean Прага"
+  - const pageTitle = "Хімчистка коврів | White Clean - Чешская Будиевица, Чешский Крумлов, Прахатице, Писек, Табор, Їндржихув-Градец, Страконице."
+  - const pageDescription = "Професійна хімчистка килимів. Видаляєм бруд, пил і плями, повертаєм кольорам яскравість і свіжість."
+  - const pageKeywords = "хімчистка коврів, хімчистка килимів, чистка ковроліну, професійна чистка коврів, екологічна хімчистка коврів"
   - const pageUrl = "carpet.html"
   - const pageImage = "img/service-carpet.jpg"
   - const twitterImage = "img/service-carpet.jpg"
@@ -25,25 +25,78 @@ append head
         "telephone": "+420 XXX XXX XXX"
       },
       "url": "https://whiteclean.cz/carpet.html",
-      "areaServed": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Прага",
-          "addressCountry": "CZ"
-        }
-      },
-      "description": "Професійна хімчистка килимів у Празі та околицях. Видаляємо пил, бруд та плями, повертаємо яскравість кольорів і подовжуємо термін служби килимів."
+      "areaServed": [
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Чешская Будиевица",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Чешский Крумлов",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Прахатице",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Писек",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Табор",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Їндржихув-Градец",
+            "addressCountry": "CZ"
+          }
+        },
+        {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Страконице",
+            "addressCountry": "CZ"
+          }
+        },
+      ],
+      "description": "Професійна хімчистка килимів. Видаляємо пил, бруд та плями, повертаємо яскравість кольорів і подовжуємо термін служби килимів."
     }
 
 
 append content
-  include components/header
+  script. 
+    const initialCategory = 2;
+  include components/header-2
   main
     include components/carpet/details
     include components/price
     include components/cta
     include components/reviews
+    include components/works
     include components/contacts
     include components/popup
   include components/footer

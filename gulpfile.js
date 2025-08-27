@@ -12,9 +12,11 @@ const clean = require('./tasks/clean');
 const archive = require('./tasks/archive');
 const { dev, prod } = require('./tasks/mode');
 const create = require('./tasks/create');
+const { generateSitemap, generateRobots } = require('./tasks/seo');
+const { generateTelegram } = require('./tasks/telegram');
 
-const build = series(clean, dev, parallel(markup, style, script, image, font, localization));
-const deploy = series(clean, prod, parallel(markup, style, script, image, font, localization), archive);
+const build = series(clean, dev, parallel(markup, style, script, image, font, localization), parallel(generateSitemap, generateRobots, generateTelegram));
+const deploy = series(clean, prod, parallel(markup, style, script, image, font, localization), parallel(generateSitemap, generateRobots, generateTelegram), archive);
 const development = series(clean, dev, parallel(markup, style, script, image, font, localization), serve);
 
 module.exports = {

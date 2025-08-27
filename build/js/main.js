@@ -28,6 +28,7 @@
         slidesPerView: "auto",
         watchSlidesProgress: true,
         slideToClickedSlide: true,
+        initialSlide: initialCategory || 0,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
@@ -48,9 +49,10 @@
         }
       });
       var worksSwiper = new Swiper(".works-swiper", {
-        spaceBetween: 10,
+        spaceBetween: 8,
         slideToClickedSlide: true,
         watchSlidesProgress: true,
+        initialSlide: initialCategory || 0,
         thumbs: {
           swiper: worksCategoriesSwiper,
           multipleActiveThumbs: false
@@ -80,6 +82,7 @@
         slidesPerView: "auto",
         watchSlidesProgress: true,
         slideToClickedSlide: true,
+        initialSlide: initialCategory || 0,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
@@ -100,10 +103,11 @@
         }
       });
       var priceSwiper = new Swiper(".price-swiper", {
-        spaceBetween: 10,
+        spaceBetween: 8,
         slideToClickedSlide: true,
         watchSlidesProgress: true,
         autoHeight: true,
+        initialSlide: initialCategory || 0,
         thumbs: {
           swiper: priceCategoriesSwiper,
           multipleActiveThumbs: false
@@ -132,7 +136,8 @@
         }
       });
       var linkNav = document.querySelectorAll('[href^="#"]');
-      var headerHeight = header.getBoundingClientRect().height;
+      var headerHeight = 0; // let headerHeight = header.getBoundingClientRect().height
+
       var V = 0.2;
 
       for (var i = 0; i < linkNav.length; i++) {
@@ -209,7 +214,7 @@
     function reviews () {
       var reviewsSwiper = new Swiper(".reviews-swiper", {
         slidesPerView: 1,
-        spaceBetween: 16,
+        spaceBetween: 8,
         // pagination: {
         //   el: ".swiper-pagination",
         //   clickable: true,
@@ -520,14 +525,19 @@
 
         for (var i = 0; i < items.length; i++) {
           items[i].addEventListener('click', function (e) {
+            var button = e.currentTarget.querySelector('.accordion-item__btn');
+
             if (e.currentTarget !== activeItem && !!activeItem) {
               activeItem.classList.remove('active');
+              button.setAttribute('aria-expanded', false);
             }
 
             if (e.currentTarget.classList.contains('active')) {
               e.currentTarget.classList.remove('active');
+              button.setAttribute('aria-expanded', false);
             } else {
               e.currentTarget.classList.add('active');
+              button.setAttribute('aria-expanded', true);
               activeItem = e.currentTarget;
             }
           });
@@ -1294,7 +1304,12 @@
       why();
       accordion();
       price();
-      AOS.init();
+      AOS.init({
+        offset: 80,
+        duration: 200,
+        easing: 'ease-in',
+        once: true
+      });
     });
 
 }());

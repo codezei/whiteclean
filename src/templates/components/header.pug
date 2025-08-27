@@ -2,21 +2,22 @@ header.header
     .container 
         .header__inner.custom-bg-dark
             .header__logo 
-                a.logo(href="index.html#promo") 
+                a.logo(href="index.html") 
                     span.sr-only Logo
                     picture     
                         source(srcset="img/logo.webp", type="image/webp")
-                        img(src="img/logo.png", alt="White Clean logo")
+                        img(src="img/logo.png", alt="White Clean logo", width="50", height="50")
+                    span.text-gradient-dark.text-uppercase.text-bold White Clean
             .header__menu#main-menu 
                 nav.menu 
-                    a.menu__item(href="index.html#about") Про нас
-                    a.menu__item(href="index.html#services") Послуги
-                    a.menu__item(href="index.html#price") Ціни
+                    a.menu__item(href="#about") Про нас
+                    a.menu__item(href="#services") Послуги
+                    a.menu__item(href="#price") Ціни
                     a.menu__item(href="#reviews") Відгуки
-                    a.menu__item(href="index.html#works") Роботи
+                    a.menu__item(href="#works") Роботи
                     a.menu__item(href="#contacts") Контакти
-                //- .header__menu-socials.text-center
-                //-     include socials
+                .header__menu-socials.text-center
+                    include socials
                 .header__menu-btn.text-center
                     a.btn.btn-third-outline.btn-small.btn-rhombus(href="tel:+999999999") 
                         .triangle.triangle-extra-small.triangle-135.top-inner.left-inner.bordered

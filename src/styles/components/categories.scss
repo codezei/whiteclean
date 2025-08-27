@@ -3,6 +3,7 @@
     --swiper-navigation-size: 24px;
     --swiper-navigation-color: yellow;
     position: relative;
+    padding: 0 0.6px;
     &:before, &:after {
         content: "";
         display: block;
@@ -38,25 +39,20 @@
 }
 
 .categories-content {
-          --border-color: var(--fourth-color);
-      position: relative;
-      background: #fff;
-      padding: 1rem;
+    --border-color: var(--fourth-color);
+    position: relative;
+    background: #fff;
+    padding: 1rem;
 }
 
 .category {
-        &-btn {
-            width: 100%;
-            &__text {
-                white-space: nowrap;
-                .swiper-slide:not(.swiper-slide-fully-visible) & {
-                    opacity: 0.5;
-                }
+    &-btn {
+        width: 100%;
+        &__text {
+            white-space: nowrap;
+            .swiper-slide:not(.swiper-slide-fully-visible) & {
+                opacity: 0.5;
             }
         }
-        @media screen and (max-width: 575px) {
-            &:not(.active) &__text {
-                display: none;
-            }
-        }
+    }
 }

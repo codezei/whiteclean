@@ -4,6 +4,7 @@ export default function () {
         slidesPerView: "auto",
         watchSlidesProgress: true,
         slideToClickedSlide: true,
+        initialSlide: initialCategory || 0,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -25,10 +26,11 @@ export default function () {
     });
 
     let priceSwiper = new Swiper(".price-swiper", {
-        spaceBetween: 10,
+        spaceBetween: 8,
         slideToClickedSlide: true,
         watchSlidesProgress: true,
         autoHeight: true,
+        initialSlide: initialCategory || 0,
         thumbs: {
             swiper: priceCategoriesSwiper,
             multipleActiveThumbs: false,
