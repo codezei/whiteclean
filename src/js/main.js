@@ -8,6 +8,7 @@ import reviews from './modules/reviews'
 import cta from './modules/cta'
 import why from './modules/why'
 import accordion from './modules/accordion'
+import contacts from './modules/contacts'
 import 'regenerator-runtime/runtime';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	why()
 	accordion()
 	price()
+	contacts()
 
 	AOS.init({
 		offset: 80,

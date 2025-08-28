@@ -1,7 +1,7 @@
 extends settings/layout
 
 prepend html
-  - const lang = "ua";
+  - const lang = "uk";
 
 prepend head
   - const pageTitle = "Хімчистка меблів, матраців, коврів, клінінг приміщень і мийка вікон | White Clean - Чешская Будиевица, Чешский Крумлов, Прахатице, Писек, Табор, Їндржихув-Градец, Страконице."
@@ -92,7 +92,6 @@ append head
 append content
   script. 
     const initialCategory = 0;
-  include components/icons
   include components/header
   main
     include components/promo
@@ -108,6 +107,7 @@ append content
     include components/faq
     include components/contacts
     include components/popup
+    include components/icons
   include components/footer
 
 append scripts
