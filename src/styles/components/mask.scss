@@ -108,6 +108,7 @@ section:has(.mask) {
 
   .triangle {
     position: absolute;
+    display: block;
     width: 0;
     height: 0;
     z-index: 2;
