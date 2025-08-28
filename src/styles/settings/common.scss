@@ -1,7 +1,7 @@
-$grid-gutter-width: 1.5rem;
-$grid-gutter-height: 1.5rem;
-$gutter: $grid-gutter-width;
-@import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
+// $grid-gutter-width: 1.5rem;
+// $grid-gutter-height: 1.5rem;
+// $gutter: $grid-gutter-width;
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
 
 
 
@@ -27,6 +27,7 @@ $gutter: $grid-gutter-width;
   --h5: 1.125rem;
   --h6: 1rem;
   --container-size: calc(100% - ($grid-gutter-width * 2));
+  --line-height: 1.3;
 
   @media screen and (min-width: 576px) {
     --container-size: 540px;
@@ -100,7 +101,7 @@ h6,
 body {
   font-family: "Cormorant Garamond", serif;
   font-size: 16px;
-  line-height: 1.3;
+  line-height: var(--line-height);
   font-weight: 300;
   overflow-x: hidden;
   color: var(--fourth-color);
@@ -626,61 +627,6 @@ br {
   gap: 0.5rem;
 }
 
-ol {
-  &:has(.bullet) {
-    counter-reset: reason;
-    list-style: none;
-    padding: 0 0 0 1rem;
-  }
-
-
-  .bullet {
-    counter-increment: reason;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
-    &__icon {
-      width: 70px;
-      flex-shrink: 0;
-    }
-
-    &__title {
-      margin-top: 0;
-      margin-bottom: 0;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      --counter-size: 40px;
-
-      &:before {
-        content: counter(reason);
-        display: block;
-        width: var(--counter-size);
-        height: var(--counter-size);
-        border: 2px dashed var(--fourth-color);
-        background-color: #fff;
-        border-radius: 50%;
-        text-align: center;
-        line-height: calc(var(--counter-size) - 4px);
-        font-weight: 700;
-        font-size: 1rem;
-        z-index: 3;
-        flex-shrink: 0;
-      }
-    }
-
-    &__description {
-      margin-bottom: 0;
-      margin-top: 0;
-      width: 100%;
-      border-bottom: 1px solid var(--fourth-color);
-      padding-bottom: 1rem;
-      flex-grow: 1;
-    }
-  }
-}
 
 
 .sr-only {
@@ -697,32 +643,6 @@ ol {
 
 *:has(>.sr-only) {
   position: relative;
-}
-
-
-.block-img {
-  --border-radius: 2rem;
-  --mask-width: 140px;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: block;
-  position: relative;
-
-  &-left {
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  }
-
-  &-right {
-    border-radius: var(--border-radius) 0 0 var(--border-radius);
-  }
-
-  img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-  }
-
 }
 
 
