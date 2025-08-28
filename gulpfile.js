@@ -15,7 +15,7 @@ const create = require('./tasks/create');
 const { generateSitemap, generateRobots } = require('./tasks/seo');
 const { generateTelegram } = require('./tasks/telegram');
 
-const build = series(clean, dev, parallel(markup, style, script, image, font, localization), parallel(generateSitemap, generateRobots, generateTelegram));
+const build = series(clean, prod, parallel(markup, style, script, image, font, localization), parallel(generateSitemap, generateRobots, generateTelegram));
 const deploy = series(clean, prod, parallel(markup, style, script, image, font, localization), parallel(generateSitemap, generateRobots, generateTelegram), archive);
 const development = series(clean, dev, parallel(markup, style, script, image, font, localization), serve);
 
