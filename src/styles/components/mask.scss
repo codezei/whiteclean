@@ -82,8 +82,10 @@ section:has(.mask) {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    position: relative;
+    position: absolute;
     z-index: 1;
+    top: 0;
+    left: 0;
   }
 
 }
