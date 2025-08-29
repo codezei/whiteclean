@@ -9,7 +9,7 @@ export default function () {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-
+        roundLengths: true,
         on: {
             click(swiper) {
                 const clickedIndex = swiper.clickedIndex;
@@ -21,7 +21,7 @@ export default function () {
                 if (priceSwiper) {
                     priceSwiper.slideTo(swiper.activeIndex);
                 }
-            },
+            }
         },
     });
 

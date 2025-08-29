@@ -171,6 +171,59 @@ svg {
 
 .text-center {
   text-align: center;
+  @media screen and (min-width: 576px) {
+    &-sm {
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &-md {
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    &-lg {
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &-xl {
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    &-xxl {
+      text-align: center;
+    }
+  }
+}
+.text-left {
+  text-align: left;
+  @media screen and (min-width: 576px) {
+    &-sm {
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &-md {
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    &-lg {
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &-xl {
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    &-xxl {
+      text-align: left;
+    }
+  }
 }
 
 .text-gold {
@@ -178,6 +231,9 @@ svg {
 }
 .text-yellow {
   color: yellow;
+}
+.text-red {
+  color: red;
 }
 
 .text-digits {

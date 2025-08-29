@@ -12,6 +12,7 @@ export default function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    roundLengths: true,
 
     on: {
       click(swiper) {

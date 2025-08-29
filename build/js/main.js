@@ -2,10 +2,10 @@
     'use strict';
 
     function faq () {
-      var items = document.querySelectorAll('.question');
-      var activeItem = document.querySelector('.question.active');
+      let items = document.querySelectorAll('.question');
+      let activeItem = document.querySelector('.question.active');
 
-      for (var i = 0; i < items.length; i++) {
+      for (let i = 0; i < items.length; i++) {
         items[i].addEventListener('click', function (e) {
           if (e.currentTarget !== activeItem && !!activeItem) {
             activeItem.classList.remove('active');
@@ -22,8 +22,8 @@
     }
 
     function works () {
-      var galleries = document.querySelectorAll(".gallery");
-      var worksCategoriesSwiper = new Swiper(".works-categories-swiper", {
+      let galleries = document.querySelectorAll(".gallery");
+      let worksCategoriesSwiper = new Swiper(".works-categories-swiper", {
         spaceBetween: 0,
         slidesPerView: "auto",
         watchSlidesProgress: true,
@@ -33,14 +33,16 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         },
+        roundLengths: true,
         on: {
-          click: function click(swiper) {
-            var clickedIndex = swiper.clickedIndex;
+          click(swiper) {
+            const clickedIndex = swiper.clickedIndex;
 
             if (clickedIndex !== undefined) {
               swiper.slideTo(clickedIndex);
             }
           },
+
           slideChange: function slideChange(swiper) {
             if (worksSwiper) {
               worksSwiper.slideTo(swiper.activeIndex);
@@ -48,7 +50,7 @@
           }
         }
       });
-      var worksSwiper = new Swiper(".works-swiper", {
+      let worksSwiper = new Swiper(".works-swiper", {
         spaceBetween: 8,
         slideToClickedSlide: true,
         watchSlidesProgress: true,
@@ -66,7 +68,7 @@
         }
       });
 
-      for (var i = 0; i < galleries.length; i++) {
+      for (let i = 0; i < galleries.length; i++) {
         lightGallery(galleries[i], {
           animateThumb: false,
           zoomFromOrigin: false,
@@ -77,7 +79,7 @@
     }
 
     function price () {
-      var priceCategoriesSwiper = new Swiper(".price-categories-swiper", {
+      let priceCategoriesSwiper = new Swiper(".price-categories-swiper", {
         spaceBetween: 0,
         slidesPerView: "auto",
         watchSlidesProgress: true,
@@ -87,14 +89,16 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         },
+        roundLengths: true,
         on: {
-          click: function click(swiper) {
-            var clickedIndex = swiper.clickedIndex;
+          click(swiper) {
+            const clickedIndex = swiper.clickedIndex;
 
             if (clickedIndex !== undefined) {
               swiper.slideTo(clickedIndex);
             }
           },
+
           slideChange: function slideChange(swiper) {
             if (priceSwiper) {
               priceSwiper.slideTo(swiper.activeIndex);
@@ -102,7 +106,7 @@
           }
         }
       });
-      var priceSwiper = new Swiper(".price-swiper", {
+      let priceSwiper = new Swiper(".price-swiper", {
         spaceBetween: 8,
         slideToClickedSlide: true,
         watchSlidesProgress: true,
@@ -123,8 +127,8 @@
     }
 
     function header() {
-      var header = document.querySelector('.header');
-      var burger = document.querySelector('.js-burger');
+      const header = document.querySelector('.header');
+      const burger = document.querySelector('.js-burger');
       burger.addEventListener('click', function (e) {
         document.documentElement.classList.toggle('open-menu');
         e.currentTarget.setAttribute('aria-expanded', !(e.currentTarget.getAttribute('aria-expanded') === 'true' ? true : false));
@@ -135,19 +139,19 @@
           burger.setAttribute('aria-expanded', !(burger.getAttribute('aria-expanded') === 'true' ? true : false));
         }
       });
-      var linkNav = document.querySelectorAll('[href^="#"]');
-      var headerHeight = 0; // let headerHeight = header.getBoundingClientRect().height
+      let linkNav = document.querySelectorAll('[href^="#"]');
+      let headerHeight = 0; // let headerHeight = header.getBoundingClientRect().height
 
-      var V = 0.2;
+      let V = 0.2;
 
-      for (var i = 0; i < linkNav.length; i++) {
+      for (let i = 0; i < linkNav.length; i++) {
         linkNav[i].addEventListener('click', function (e) {
           e.preventDefault();
-          var w = window.pageYOffset;
-          var hash = this.href.replace(/[^#]*(.*)/, '$1');
-          var tar = document.querySelector(hash);
-          var t = tar.getBoundingClientRect().top - headerHeight;
-          var start = null;
+          let w = window.pageYOffset;
+          let hash = this.href.replace(/[^#]*(.*)/, '$1');
+          let tar = document.querySelector(hash);
+          let t = tar.getBoundingClientRect().top - headerHeight;
+          let start = null;
           requestAnimationFrame(step);
 
           function step(time) {
@@ -183,7 +187,7 @@
     }
 
     function services () {
-      var servicesSwiper = new Swiper(".services-swiper", {
+      let servicesSwiper = new Swiper(".services-swiper", {
         slidesPerView: 1,
         spaceBetween: 16,
         // pagination: {
@@ -212,7 +216,7 @@
     }
 
     function reviews () {
-      var reviewsSwiper = new Swiper(".reviews-swiper", {
+      let reviewsSwiper = new Swiper(".reviews-swiper", {
         slidesPerView: 1,
         spaceBetween: 8,
         // pagination: {
@@ -240,231 +244,42 @@
       });
     }
 
-    function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-      try {
-        var info = gen[key](arg);
-        var value = info.value;
-      } catch (error) {
-        reject(error);
-        return;
-      }
-
-      if (info.done) {
-        resolve(value);
-      } else {
-        Promise.resolve(value).then(_next, _throw);
-      }
-    }
-
-    function _asyncToGenerator(fn) {
-      return function () {
-        var self = this,
-            args = arguments;
-        return new Promise(function (resolve, reject) {
-          var gen = fn.apply(self, args);
-
-          function _next(value) {
-            asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-          }
-
-          function _throw(err) {
-            asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-          }
-
-          _next(undefined);
-        });
-      };
-    }
-
-    function _slicedToArray(arr, i) {
-      return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-    }
-
-    function _arrayWithHoles(arr) {
-      if (Array.isArray(arr)) return arr;
-    }
-
-    function _iterableToArrayLimit(arr, i) {
-      if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-      var _arr = [];
-      var _n = true;
-      var _d = false;
-      var _e = undefined;
-
-      try {
-        for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-          _arr.push(_s.value);
-
-          if (i && _arr.length === i) break;
-        }
-      } catch (err) {
-        _d = true;
-        _e = err;
-      } finally {
-        try {
-          if (!_n && _i["return"] != null) _i["return"]();
-        } finally {
-          if (_d) throw _e;
-        }
-      }
-
-      return _arr;
-    }
-
-    function _unsupportedIterableToArray(o, minLen) {
-      if (!o) return;
-      if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-      var n = Object.prototype.toString.call(o).slice(8, -1);
-      if (n === "Object" && o.constructor) n = o.constructor.name;
-      if (n === "Map" || n === "Set") return Array.from(o);
-      if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-    }
-
-    function _arrayLikeToArray(arr, len) {
-      if (len == null || len > arr.length) len = arr.length;
-
-      for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
-
-      return arr2;
-    }
-
-    function _nonIterableRest() {
-      throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-    }
-
-    function _createForOfIteratorHelper(o, allowArrayLike) {
-      var it;
-
-      if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {
-        if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {
-          if (it) o = it;
-          var i = 0;
-
-          var F = function () {};
-
-          return {
-            s: F,
-            n: function () {
-              if (i >= o.length) return {
-                done: true
-              };
-              return {
-                done: false,
-                value: o[i++]
-              };
-            },
-            e: function (e) {
-              throw e;
-            },
-            f: F
-          };
-        }
-
-        throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-      }
-
-      var normalCompletion = true,
-          didErr = false,
-          err;
-      return {
-        s: function () {
-          it = o[Symbol.iterator]();
-        },
-        n: function () {
-          var step = it.next();
-          normalCompletion = step.done;
-          return step;
-        },
-        e: function (e) {
-          didErr = true;
-          err = e;
-        },
-        f: function () {
-          try {
-            if (!normalCompletion && it.return != null) it.return();
-          } finally {
-            if (didErr) throw err;
-          }
-        }
-      };
-    }
-
     function cta () {
-      var form = document.querySelector('#cta-form');
+      const form = document.querySelector('#cta-form');
       if (!form) return;
-      var popup = document.querySelector('.popup');
-      var popupMessage = document.querySelector('.popup__message');
-      form.addEventListener("submit", /*#__PURE__*/function () {
-        var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(e) {
-          var formData, work, _iterator, _step, _step$value, key, value, response, answer;
+      const popup = document.querySelector('.popup');
+      const popupMessage = document.querySelector('.popup__message');
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        let formData = new FormData(e.target);
+        let work = [];
 
-          return regeneratorRuntime.wrap(function _callee$(_context) {
-            while (1) {
-              switch (_context.prev = _context.next) {
-                case 0:
-                  e.preventDefault();
-                  formData = new FormData(e.target);
-                  work = [];
-                  _iterator = _createForOfIteratorHelper(formData.entries());
+        for (let [key, value] of formData.entries()) {
+          if (key === 'work') {
+            work.push(value);
+          }
+        }
 
-                  try {
-                    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                      _step$value = _slicedToArray(_step.value, 2), key = _step$value[0], value = _step$value[1];
+        formData.set('work', work.join('; '));
 
-                      if (key === 'work') {
-                        work.push(value);
-                      }
-                    }
-                  } catch (err) {
-                    _iterator.e(err);
-                  } finally {
-                    _iterator.f();
-                  }
+        try {
+          let response = await fetch('/telegram.php', {
+            method: 'POST',
+            body: formData
+          });
+          let answer = await response.json();
+          popupMessage.innerHTML = answer.message;
+          popup.classList.add('active');
+          setTimeout(function () {
+            popup.classList.remove("active");
+          }, 4000);
+        } catch (e) {
+          console.log(e.message);
+          popup.classList.remove("active");
+        }
 
-                  formData.set('work', work.join('; '));
-                  _context.prev = 6;
-                  _context.next = 9;
-                  return fetch('/telegram.php', {
-                    method: 'POST',
-                    body: formData
-                  });
-
-                case 9:
-                  response = _context.sent;
-                  _context.next = 12;
-                  return response.json();
-
-                case 12:
-                  answer = _context.sent;
-                  popupMessage.innerHTML = answer.message;
-                  popup.classList.add('active');
-                  setTimeout(function () {
-                    popup.classList.remove("active");
-                  }, 4000);
-                  _context.next = 22;
-                  break;
-
-                case 18:
-                  _context.prev = 18;
-                  _context.t0 = _context["catch"](6);
-                  console.log(_context.t0.message);
-                  popup.classList.remove("active");
-
-                case 22:
-                  form.reset();
-
-                case 23:
-                case "end":
-                  return _context.stop();
-              }
-            }
-          }, _callee, null, [[6, 18]]);
-        }));
-
-        return function (_x) {
-          return _ref.apply(this, arguments);
-        };
-      }());
+        form.reset();
+      });
     }
 
     function why() {
@@ -485,19 +300,19 @@
       //         whySwiper.slideTo(e.currentTarget.dataset.slide)
       //     })
       // }
-      var furnitureSlider = new BeerSlider(document.getElementById("furniture-slider"));
+      let furnitureSlider = new BeerSlider(document.getElementById("furniture-slider"));
     }
 
     function accordion () {
-      var accordions = document.querySelectorAll('.accordion');
+      let accordions = document.querySelectorAll('.accordion');
 
-      var _loop = function _loop(a) {
-        var items = accordions[a].querySelectorAll('.accordion-item');
-        var activeItem = accordions[a].querySelector('.accordion-item.active');
+      for (let a = 0; a < accordions.length; a++) {
+        let items = accordions[a].querySelectorAll('.accordion-item');
+        let activeItem = accordions[a].querySelector('.accordion-item.active');
 
-        for (var i = 0; i < items.length; i++) {
+        for (let i = 0; i < items.length; i++) {
           items[i].addEventListener('click', function (e) {
-            var button = e.currentTarget.querySelector('.accordion-item__btn');
+            let button = e.currentTarget.querySelector('.accordion-item__btn');
 
             if (e.currentTarget !== activeItem && !!activeItem) {
               activeItem.classList.remove('active');
@@ -514,23 +329,19 @@
             }
           });
         }
-      };
-
-      for (var a = 0; a < accordions.length; a++) {
-        _loop(a);
       }
     }
 
     function contacts () {
-      var map = document.querySelector(".contacts__iframe");
-      var trigger = document.getElementById("map-load-trigger");
+      const map = document.querySelector(".contacts__iframe");
+      const trigger = document.getElementById("map-load-trigger");
 
       if ("IntersectionObserver" in window) {
-        var observer = new IntersectionObserver(function (entries, obs) {
-          entries.forEach(function (entry) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
             if (entry.isIntersecting) {
               // Создаём iframe через JS
-              var iframe = document.createElement("iframe");
+              const iframe = document.createElement("iframe");
               iframe.className = "contacts__iframe";
               iframe.src = map.dataset.src;
               iframe.width = "640";
@@ -547,7 +358,7 @@
         observer.observe(trigger);
       } else {
         // Создаём iframe через JS
-        var iframe = document.createElement("iframe");
+        const iframe = document.createElement("iframe");
         iframe.className = "contacts__iframe";
         iframe.src = map.dataset.src;
         iframe.width = "640";

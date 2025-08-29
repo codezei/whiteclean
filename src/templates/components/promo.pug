@@ -12,8 +12,10 @@ section.promo#promo.bg.bg-dark
                                 .extractor__cleaner(data-aos="fade-left", data-aos-delay="100") 
                                 h2.h5.text-light.extractor__text.mb-0(data-aos="fade-left", data-aos-delay="200") Ми ефективно видаляємо бруд за допомогою професійного обладнання. Ваша оселя знову виглядатиме як нова.
                         .col-12
-                            .row.g-2.justify-content-center.justify-content-sm-start 
+                            .row.g-2.justify-content-center.justify-content-lg-start 
                                 include cta-buttons
+                                .col-12
+                                    .text-bold.text-center.text-left-lg При першому замовленні знаижка 15%
             .col-12.col-lg-4
                 .mask
                     .triangle.triangle-135.top-inner.left-inner
@@ -39,6 +41,13 @@ section.promo#promo.bg.bg-dark
                         source(srcset="img/promo-img.webp", type="image/webp")
                         img.mask__img(src="img/promo-img.jpg", alt="")
                     .mask__inner
-                        .text-center.text-light 
-                            b.text-bold Ми працюємо в містах: 
-                            | Чешская Будиевица, Чешский Крумлов, Прахатице, Писек, Табор, Їндржихув-Градец, Страконице
+                        .text-center.text-light.text-bold 
+                            //- Ми працюємо в містах: 
+                            br
+                            span.text-uppercase Чешская&nbsp;Будиевица, 
+                            span.text-uppercase Чешский&nbsp;Крумлов, 
+                            span.text-uppercase Прахатице, 
+                            span.text-uppercase Писек, 
+                            span.text-uppercase Табор, 
+                            span.text-uppercase Їндржихув-Градец, 
+                            span.text-uppercase Страконице
